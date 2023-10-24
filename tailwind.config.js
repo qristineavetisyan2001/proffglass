@@ -17,6 +17,11 @@ module.exports = {
             },
             backgroundColor: {
                 'black-37': 'rgba(0, 0, 0, 0.45)',
+                'home-page-background': '#F1F1F1',
+                'line-color': '#828485',
+            },
+            textColor: {
+                'title-color': '#404449',
             },
         },
     },

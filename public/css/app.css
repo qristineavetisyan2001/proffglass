@@ -1101,14 +1101,14 @@ select {
 .col-span-6 {
   grid-column: span 6 / span 6;
 }
-.col-start-2 {
-  grid-column-start: 2;
-}
-.col-start-1 {
-  grid-column-start: 1;
-}
 .float-right {
   float: right;
+}
+.float-left {
+  float: left;
+}
+.clear-both {
+  clear: both;
 }
 .mx-auto {
   margin-left: auto;
@@ -1156,6 +1156,9 @@ select {
 .ml-6 {
   margin-left: 1.5rem;
 }
+.ml-\[15px\] {
+  margin-left: 15px;
+}
 .mr-2 {
   margin-right: 0.5rem;
 }
@@ -1186,20 +1189,23 @@ select {
 .mt-8 {
   margin-top: 2rem;
 }
-.ml-\[5px\] {
-  margin-left: 5px;
-}
-.ml-\[15px\] {
-  margin-left: 15px;
-}
-.mt-\[15px\] {
-  margin-top: 15px;
+.mt-\[10px\] {
+  margin-top: 10px;
 }
 .mt-\[20px\] {
   margin-top: 20px;
 }
-.ml-\[50px\] {
-  margin-left: 50px;
+.mt-\[370px\] {
+  margin-top: 370px;
+}
+.mt-\[550px\] {
+  margin-top: 550px;
+}
+.mt-\[80px\] {
+  margin-top: 80px;
+}
+.mt-\[15px\] {
+  margin-top: 15px;
 }
 .block {
   display: block;
@@ -1252,6 +1258,12 @@ select {
 .h-\[150px\] {
   height: 150px;
 }
+.h-\[1px\] {
+  height: 1px;
+}
+.h-auto {
+  height: auto;
+}
 .h-full {
   height: 100%;
 }
@@ -1297,8 +1309,17 @@ select {
 .w-8 {
   width: 2rem;
 }
-.w-\[70\%\] {
-  width: 70%;
+.w-\[23\%\] {
+  width: 23%;
+}
+.w-\[73\%\] {
+  width: 73%;
+}
+.w-\[85\%\] {
+  width: 85%;
+}
+.w-\[90\%\] {
+  width: 90%;
 }
 .w-auto {
   width: auto;
@@ -1306,14 +1327,26 @@ select {
 .w-full {
   width: 100%;
 }
+.w-\[27\%\] {
+  width: 27%;
+}
+.w-\[15\%\] {
+  width: 15%;
+}
 .w-\[80\%\] {
   width: 80%;
 }
 .w-\[75\%\] {
   width: 75%;
 }
-.w-\[73\%\] {
-  width: 73%;
+.w-\[70\%\] {
+  width: 70%;
+}
+.w-\[72\%\] {
+  width: 72%;
+}
+.w-\[50\%\] {
+  width: 50%;
 }
 .min-w-0 {
   min-width: 0px;
@@ -1395,6 +1428,12 @@ select {
 }
 .flex-wrap {
   flex-wrap: wrap;
+}
+.content-center {
+  align-content: center;
+}
+.content-end {
+  align-content: flex-end;
 }
 .items-center {
   align-items: center;
@@ -1544,6 +1583,10 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(31 41 55 / var(--tw-bg-opacity));
 }
+.bg-home-page-background {
+  --tw-bg-opacity: 1;
+  background-color: rgb(241 241 241 / var(--tw-bg-opacity));
+}
 .bg-indigo-50 {
   --tw-bg-opacity: 1;
   background-color: rgb(238 242 255 / var(--tw-bg-opacity));
@@ -1555,6 +1598,10 @@ select {
 .bg-indigo-600 {
   --tw-bg-opacity: 1;
   background-color: rgb(79 70 229 / var(--tw-bg-opacity));
+}
+.bg-line-color {
+  --tw-bg-opacity: 1;
+  background-color: rgb(130 132 133 / var(--tw-bg-opacity));
 }
 .bg-red-100 {
   --tw-bg-opacity: 1;
@@ -1572,12 +1619,11 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
-.bg-\[\#000000\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-}
 .bg-opacity-25 {
   --tw-bg-opacity: 0.25;
+}
+.bg-opacity-50 {
+  --tw-bg-opacity: 0.5;
 }
 .bg-cover {
   background-size: cover;
@@ -1587,6 +1633,10 @@ select {
 }
 .bg-no-repeat {
   background-repeat: no-repeat;
+}
+.object-contain {
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .object-cover {
   -o-object-fit: cover;
@@ -1666,6 +1716,9 @@ select {
 .pb-4 {
   padding-bottom: 1rem;
 }
+.pb-\[30px\] {
+  padding-bottom: 30px;
+}
 .pl-3 {
   padding-left: 0.75rem;
 }
@@ -1690,6 +1743,15 @@ select {
 .pt-8 {
   padding-top: 2rem;
 }
+.pt-\[100px\] {
+  padding-top: 100px;
+}
+.pt-\[20px\] {
+  padding-top: 20px;
+}
+.pt-\[40px\] {
+  padding-top: 40px;
+}
 .text-left {
   text-align: left;
 }
@@ -1712,11 +1774,23 @@ select {
   font-size: 1.5rem;
   line-height: 2rem;
 }
+.text-\[17px\] {
+  font-size: 17px;
+}
 .text-\[200px\] {
   font-size: 200px;
 }
+.text-\[24px\] {
+  font-size: 24px;
+}
 .text-\[25px\] {
   font-size: 25px;
+}
+.text-\[34px\] {
+  font-size: 34px;
+}
+.text-\[90px\] {
+  font-size: 90px;
 }
 .text-base {
   font-size: 1rem;
@@ -1759,8 +1833,20 @@ select {
 .leading-7 {
   line-height: 1.75rem;
 }
+.leading-\[103\.49px\] {
+  line-height: 103.49px;
+}
+.leading-\[19\.55px\] {
+  line-height: 19.55px;
+}
+.leading-\[27\.6px\] {
+  line-height: 27.6px;
+}
 .leading-\[28\.75px\] {
   line-height: 28.75px;
+}
+.leading-\[40\.25px\] {
+  line-height: 40.25px;
 }
 .leading-tight {
   line-height: 1.25;
@@ -1834,6 +1920,10 @@ select {
 .text-red-600 {
   --tw-text-opacity: 1;
   color: rgb(220 38 38 / var(--tw-text-opacity));
+}
+.text-title-color {
+  --tw-text-opacity: 1;
+  color: rgb(64 68 73 / var(--tw-text-opacity));
 }
 .text-white {
   --tw-text-opacity: 1;
