@@ -1,0 +1,24 @@
+.green_door {
+    animation-duration: 0.3s;
+    animation-fill-mode: both;
+    animation-timing-function: ease;
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
+        height: auto;
+    }
+    to {
+        opacity: 0;
+        height: 0;
+    }
+}
+
+.door {
+    opacity: 0;
+    height: 0;
+    display: none;
+    animation-name: fade-out;
+    animation-delay: 1s;
+}
