@@ -1089,6 +1089,15 @@ select {
 .top-0 {
   top: 0px;
 }
+.left-\[100px\] {
+  left: 100px;
+}
+.left-\[150px\] {
+  left: 150px;
+}
+.left-\[300px\] {
+  left: 300px;
+}
 .z-0 {
   z-index: 0;
 }
@@ -1324,6 +1333,9 @@ select {
 .h-\[235px\] {
   height: 235px;
 }
+.h-\[78px\] {
+  height: 78px;
+}
 .max-h-0 {
   max-height: 0px;
 }
@@ -1431,6 +1443,9 @@ select {
 }
 .w-\[1px\] {
   width: 1px;
+}
+.w-\[100px\] {
+  width: 100px;
 }
 .min-w-0 {
   min-width: 0px;

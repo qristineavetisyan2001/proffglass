@@ -3,6 +3,7 @@
 @section('title', 'Proff Glass')
 
 @section('content')
+
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
 
     <div class="w-full h-auto min-h-[1250px] bg-cover bg-no-repeat"
@@ -36,6 +37,9 @@
                                                         <img src="/images/arrowRight.png" class="object-contain">
                                                     </div>
                                                     <div id="subcategory_line_{{ $subcategory->id }}" class="lines w-[1px] opacity-0 h-[1px] bg-[#ABC940] mt-[5px]"></div>
+                                                    <div class="hidden w-[213px] h-auto mt-[20px] pl-[20px] pb-[20px] bg-[#272727] absolute left-[300px]">
+
+                                                    </div>
                                                 </div>
                                                 @endforeach
                                             </div>
