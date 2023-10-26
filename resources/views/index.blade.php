@@ -5,7 +5,8 @@
 @section('content')
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
 
-    <div class="w-full h-auto min-h-[1250px] bg-cover bg-no-repeat" style="background-image: url('images/indexImage.png')">
+    <div class="w-full h-auto min-h-[1250px] bg-cover bg-no-repeat"
+         style="background-image: url('images/indexImage.png')">
         <div class="w-full h-auto bg-black-37 pb-[50px]">
             <div class="w-[73%] h-[225px] mx-auto p-[40px] flex justify-between">
                 <img src="images/logo.png" class="object-contain max-w-full ml-[30px]">
@@ -15,24 +16,30 @@
                     </li>
                     <li class="font-amu font-normal text-[25px] leading-[28.75px] text-white cursor-pointer">
                         <p id="showCategories" onclick="showCategories()">Արտադրանք</p>
-                        <div id="categories" class="hidden w-[213px] h-auto bg-[#272727] mt-[20px] pl-[20px] pb-[20px] absolute">
+                        <div id="categories"
+                             class="hidden w-[213px] h-auto bg-[#272727] mt-[20px] pl-[20px] pb-[20px] absolute">
                             @foreach ($categories as $category)
                                 <div class="w-full h-auto mt-[20px]">
                                     <p class="font-amu font-weight-400 text-[17px] leading-[19.55px] text-[#CECECE]"
-                                    onclick="showSubcategories({{ $category->id }})">
+                                       onclick="showSubcategories({{ $category->id }})">
                                         {{ $category->title }}
                                     </p>
-                                    <div id="category{{ $category->id }}" class="subcategories_div w-[80%] h-auto mx-auto hidden overflow-hidden transition-max-h-500 ease-in-out">
-                                        <div class="w-full h-auto flex flex-wrap pt-[20px]">
-                                            <div class="w-full flex justify-between">
-                                                <p class="font-amu font-weight-400 text-[17px] leading-[19.55px] text-[#CECECE]">
-                                                    Պատուհաններ
-                                                </p>
-                                                <img src="/images/arrowRight.png" class="object-contain">
+                                    @if(count($category->subcategories) > 0)
+                                            <div id="category{{ $category->id }}"
+                                                 class="subcategories_div w-[80%] h-auto mx-auto hidden overflow-hidden transition-max-h-500 ease-in-out">
+                                                @foreach ($category->subcategories as $subcategory)
+                                                <div class="w-full h-auto flex flex-wrap pt-[15px]">
+                                                    <div onclick="showSubcategoryLine({{ $subcategory->id }})" class="w-full flex justify-between">
+                                                        <p class="font-amu font-weight-400 text-[17px] leading-[19.55px] text-[#CECECE]">
+                                                            {{ $subcategory->title }}
+                                                        </p>
+                                                        <img src="/images/arrowRight.png" class="object-contain">
+                                                    </div>
+                                                    <div id="subcategory_line_{{ $subcategory->id }}" class="lines w-[1px] opacity-0 h-[1px] bg-[#ABC940] mt-[5px]"></div>
+                                                </div>
+                                                @endforeach
                                             </div>
-                                            <div class="w-[80%] h-[1px] bg-[#ABC940] mt-[5px]"></div>
-                                        </div>
-                                    </div>
+                                    @endif
                                 </div>
                             @endforeach
                         </div>

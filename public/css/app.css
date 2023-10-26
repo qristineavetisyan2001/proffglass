@@ -1426,6 +1426,12 @@ select {
 .w-\[80\%\] {
   width: 80%;
 }
+.w-\[0\%\] {
+  width: 0%;
+}
+.w-\[1px\] {
+  width: 1px;
+}
 .min-w-0 {
   min-width: 0px;
 }
@@ -1870,6 +1876,9 @@ select {
 }
 .pt-\[17px\] {
   padding-top: 17px;
+}
+.pt-\[1px\] {
+  padding-top: 1px;
 }
 .text-left {
   text-align: left;

@@ -100,33 +100,79 @@ document.getElementById('scroll-link').addEventListener('click', function (e) {
         }
     }.bind(this), 100);
 });
+var line = false;
 
 function showSubcategories(category) {
     var allSubcategories = $('.subcategories_div');
+    var allSubcategoryLines = $('.lines');
 
     allSubcategories.slideUp();
+    allSubcategoryLines.animate({width: '1px'}, 200);
+    setTimeout(function() {
+        allSubcategoryLines.css('opacity', '0');
+    }, 200);
 
+    line = false;
     var subcategories = $('#category' + category);
     if (!subcategories.is(":visible")) {
         subcategories.slideDown();
     }
 }
-function showCategories(){
+
+function showCategories() {
     var categories = $('#categories');
     if (categories.is(":visible")) {
         categories.slideUp();
     } else {
         categories.slideDown();
-        var allSubcategories = $('.subcategories_div');
+    }
+    var allSubcategories = $('.subcategories_div');
+    var allSubcategoryLines = $('.lines');
+    allSubcategories.slideUp();
 
-        allSubcategories.slideUp();
+    allSubcategoryLines.animate({width: '1px'}, 200);
+    setTimeout(function() {
+        allSubcategoryLines.css('opacity', '0');
+    }, 200);
+}
+
+function showSubcategoryLine(subcategory) {
+    var subcategoryLine = $('#subcategory_line_' + subcategory);
+    if (line == subcategory) {
+        subcategoryLine.animate({width: '1px'}, 500);
+        setTimeout(function() {
+            subcategoryLine.css('opacity', '0');
+        }, 500);
+        line = false;
+    } else if (line !== false) {
+        var allSubcategoryLines = $('.lines');
+
+        allSubcategoryLines.animate({width: '1px'}, 500);
+        setTimeout(function() {
+            allSubcategoryLines.css('opacity', '0');
+        }, 500);
+        setTimeout(function() {
+            subcategoryLine.css('opacity', '1');
+        }, 500);
+        subcategoryLine.animate({width: '80%'}, 500);
+        line = subcategory;
+    } else {
+        subcategoryLine.css('opacity', '1');
+        subcategoryLine.animate({width: '80%'}, 500);
+        line = subcategory;
     }
 }
+
 $(document).on('click', function (event) {
     if (!$(event.target).closest('#showCategories, #categories').length) {
         $('#categories').slideUp();
         var allSubcategories = $('.subcategories_div');
+        var allSubcategoryLines = $('.lines');
 
         allSubcategories.slideUp();
+        allSubcategoryLines.animate({width: '1px'}, 200);
+        setTimeout(function() {
+            allSubcategoryLines.css('opacity', '0');
+        }, 200);
     }
 });

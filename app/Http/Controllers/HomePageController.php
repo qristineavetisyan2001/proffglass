@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class HomePageController extends Controller
 {
     public function index (){
-        $categories = Category::orderBy('id', 'asc')->get();
+        $categories = Category::orderBy('id', 'asc')->with('subcategories')->get();
 
         return view('index')
             ->with('categories', $categories);
