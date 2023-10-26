@@ -5,17 +5,37 @@
 @section('content')
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
 
-    <div class="w-full h-[1250px] bg-cover bg-no-repeat" style="background-image: url('images/indexImage.png')">
-        <div class="w-full h-full bg-black-37">
-            <div class="w-[73%] h-[150px] mx-auto p-[40px] grid gap-8 grid-cols-3">
-                <img src="images/logo.png" class="col-span-1">
-                <ul class="col-span-2 flex justify-between mt-[20px]">
-                    <li class="font-amu font-normal text-[25px] leading-[28.75px] text-white cursor-pointer">Մեր մասին
+    <div class="w-full h-auto min-h-[1250px] bg-cover bg-no-repeat" style="background-image: url('images/indexImage.png')">
+        <div class="w-full h-auto bg-black-37 pb-[50px]">
+            <div class="w-[73%] h-[225px] mx-auto p-[40px] flex justify-between">
+                <img src="images/logo.png" class="object-contain max-w-full ml-[30px]">
+                <ul class="flex justify-between mt-[20px] w-[45%]">
+                    <li class="font-amu font-normal text-[25px] leading-[28.75px] text-white cursor-pointer">
+                        Մեր մասին
                     </li>
-                    <li class="font-amu font-normal text-[25px] leading-[28.75px] text-white cursor-pointer">Արտադրանք
-                    </li>
-                    <li class="font-amu font-normal text-[25px] leading-[28.75px] text-white cursor-pointer">Մեր
-                        աշխատանքները
+                    <li class="font-amu font-normal text-[25px] leading-[28.75px] text-white cursor-pointer">
+                        <p id="showCategories" onclick="showCategories()">Արտադրանք</p>
+                        <div id="categories" class="hidden w-[213px] h-auto bg-[#272727] mt-[20px] pl-[20px] pb-[20px] absolute">
+                            @foreach ($categories as $category)
+                                <div class="w-full h-auto mt-[20px]">
+                                    <p class="font-amu font-weight-400 text-[17px] leading-[19.55px] text-[#CECECE]"
+                                    onclick="showSubcategories({{ $category->id }})">
+                                        {{ $category->title }}
+                                    </p>
+                                    <div id="category{{ $category->id }}" class="subcategories_div w-[80%] h-auto mx-auto hidden overflow-hidden transition-max-h-500 ease-in-out">
+                                        <div class="w-full h-auto flex flex-wrap pt-[20px]">
+                                            <div class="w-full flex justify-between">
+                                                <p class="font-amu font-weight-400 text-[17px] leading-[19.55px] text-[#CECECE]">
+                                                    Պատուհաններ
+                                                </p>
+                                                <img src="/images/arrowRight.png" class="object-contain">
+                                            </div>
+                                            <div class="w-[80%] h-[1px] bg-[#ABC940] mt-[5px]"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endforeach
+                        </div>
                     </li>
                     <li class="font-amu font-normal text-[25px] leading-[28.75px] text-white cursor-pointer">
                         Նորություններ
@@ -141,4 +161,5 @@
         </div>
         <div class="clear-both"></div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="{{ asset('js/main.js') }}"></script>
