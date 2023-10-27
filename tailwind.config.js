@@ -14,6 +14,7 @@ module.exports = {
             fontFamily: {
                 sans: ['Nunito', ...defaultTheme.fontFamily.sans],
                 'amu': ['Arial', 'AMU'],
+                'noah' : ['Noah']
             },
             backgroundColor: {
                 'black-37': 'rgba(0, 0, 0, 0.45)',

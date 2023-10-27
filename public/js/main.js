@@ -1,55 +1,95 @@
-const door1 = document.getElementById('door1');
-const green_door1 = document.getElementById('green_door1');
-const door2 = document.getElementById('door2');
-const green_door2 = document.getElementById('green_door2');
-const door3 = document.getElementById('door3');
-const green_door3 = document.getElementById('green_door3');
-const door4 = document.getElementById('door4');
-const green_door4 = document.getElementById('green_door4');
+var isGreen1 = false;
 
 $("#door1").hover(
     function() {
-        door1.style.display = 'none';
-        green_door1.style.display = 'block';
+        if (!isGreen1) {
+            var baseDoor = "/images/greenDoor1.png";
+            var imageElement = $("<img>").attr("src", baseDoor).attr("class", 'image_door1_green');
+            $("#door1").append(imageElement);
+            $('.image_door1').remove();
+            isGreen1 = true;
+        }
     },
     function() {
-        green_door1.style.display = 'none';
-        door1.style.display = 'block';
+        if (isGreen1) {
+            var baseDoor = "/images/door1.png";
+            var imageElement = $("<img>").attr("src", baseDoor).attr("class", 'image_door1');
+            $("#door1").append(imageElement);
+            $('.image_door1_green').remove();
+            isGreen1 = false;
+        }
     }
 );
+
+var isGreen2 = false;
 
 $("#door2").hover(
     function() {
-        door2.style.display = 'none';
-        green_door2.style.display = 'block';
+        if (!isGreen2) {
+            var baseDoor = "/images/greenDoor2.png";
+            var imageElement = $("<img>").attr("src", baseDoor).attr("class", 'image_door2_green');
+            $("#door2").append(imageElement);
+            $('.image_door2').remove();
+            isGreen2 = true;
+        }
     },
     function() {
-        green_door2.style.display = 'none';
-        door2.style.display = 'block';
+        if (isGreen2) {
+            var baseDoor = "/images/door2.png";
+            var imageElement = $("<img>").attr("src", baseDoor).attr("class", 'image_door2');
+            $("#door2").append(imageElement);
+            $('.image_door2_green').remove();
+            isGreen2 = false;
+        }
     }
 );
+
+var isGreen3 = false;
 
 $("#door3").hover(
     function() {
-        door3.style.display = 'none';
-        green_door3.style.display = 'block';
+        if (!isGreen3) {
+            var baseDoor = "/images/greenDoor3.png";
+            var imageElement = $("<img>").attr("src", baseDoor).attr("class", 'image_door3_green');
+            $("#door3").append(imageElement);
+            $('.image_door3').remove();
+            isGreen3 = true;
+        }
     },
     function() {
-        green_door3.style.display = 'none';
-        door3.style.display = 'block';
+        if (isGreen3) {
+            var baseDoor = "/images/door3.png";
+            var imageElement = $("<img>").attr("src", baseDoor).attr("class", 'image_door3');
+            $("#door3").append(imageElement);
+            $('.image_door3_green').remove();
+            isGreen3 = false;
+        }
     }
 );
 
+var isGreen4 = false;
+
 $("#door4").hover(
     function() {
-        door4.style.display = 'none';
-        green_door4.style.display = 'block';
+        if (!isGreen4) {
+            var baseDoor = "/images/greenDoor4.png";
+            var imageElement = $("<img>").attr("src", baseDoor).attr("class", 'image_door4_green');
+            $("#door4").append(imageElement);
+            $('.image_door4').remove();
+            isGreen4 = true;
+        }
     },
     function() {
-        green_door4.style.display = 'none';
-        door4.style.display = 'block';
+        if (isGreen4) {
+            var baseDoor = "/images/door4.png";
+            var imageElement = $("<img>").attr("src", baseDoor).attr("class", 'image_door4');
+            $("#door4").append(imageElement);
+            $('.image_door4_green').remove();
+            isGreen4 = false;
+        }
     }
 );
+
 document.getElementById('scroll-link').addEventListener('click', function (e) {
     e.preventDefault();
 

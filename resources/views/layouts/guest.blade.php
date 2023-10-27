@@ -4,8 +4,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <link rel="icon" href="/images/logo.png">
-
     <title>{{ config('app.name', 'Laravel') }}</title>
 
 
@@ -20,7 +18,8 @@
 </head>
 <body>
 <div class="font-sans text-gray-900 antialiased">
-    {{ $slot }}
+    @yield('content')
 </div>
+@include('contact')
 </body>
 </html>
