@@ -68,7 +68,7 @@
         <img src="/images/footerYerevakLogo.png" class="object-contain">
     </div>
     <div style="box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25); border: 1px solid #C9C9C9"
-         class="hidden w-[459px] h-auto bg-[#828385] mx-auto m-[20px] pl-[40px] pr-[40px] pt-[50px] pb-[20px]">
+         class="hidden w-[459px] h-auto bg-[#828385] mx-auto m-[20px] pl-[40px] pr-[40px] pt-[50px] pb-[20px] absolute left-[40%] top-0">
         <input style="color:rgba(107, 103, 100, 0.8)" type="text" class="w-full h-[39.98px] rounded-[8px]
         font-amu font-weight-400 text-[17px] leading-[25px]" placeholder="Անուն Ազգանուն">
 
@@ -87,5 +87,4 @@
             </button>
         </div>
     </div>
-
 </div>
