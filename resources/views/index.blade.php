@@ -21,29 +21,20 @@
                              class="hidden w-[213px] h-auto bg-[#272727] mt-[20px] pl-[20px] pb-[20px] absolute">
                             @foreach ($categories as $category)
                                 <div class="w-full h-auto mt-[20px]">
-                                    <p class="font-amu font-weight-400 text-[17px] leading-[19.55px] text-[#CECECE]"
-                                       onclick="showSubcategories({{ $category->id }})">
-                                        {{ $category->title }}
-                                    </p>
-                                    @if(count($category->subcategories) > 0)
-                                            <div id="category{{ $category->id }}"
-                                                 class="subcategories_div w-[80%] h-auto mx-auto hidden overflow-hidden transition-max-h-500 ease-in-out">
-                                                @foreach ($category->subcategories as $subcategory)
-                                                <div class="w-full h-auto flex flex-wrap pt-[15px]">
-                                                    <div onclick="showSubcategoryLine({{ $subcategory->id }})" class="w-full flex justify-between">
-                                                        <p class="font-amu font-weight-400 text-[17px] leading-[19.55px] text-[#CECECE]">
-                                                            {{ $subcategory->title }}
-                                                        </p>
-                                                        <img src="/images/arrowRight.png" class="object-contain">
-                                                    </div>
-                                                    <div id="subcategory_line_{{ $subcategory->id }}" class="lines w-[1px] opacity-0 h-[1px] bg-[#ABC940] mt-[5px]"></div>
-                                                    <div class="hidden w-[213px] h-auto mt-[20px] pl-[20px] pb-[20px] bg-[#272727] absolute left-[300px]">
-
-                                                    </div>
-                                                </div>
-                                                @endforeach
-                                            </div>
-                                    @endif
+                                    <div class="w-full h-full flex">
+                                        <div id="category{{$category->id}}" onclick="showSubcategories({{ $category->id }})" class="allSubcategories w-[80%] flex">
+                                            <p id="line{{ $category->id }}" class="line font-amu font-weight-400 text-[17px] leading-[19.55px] text-[#CECECE]">
+                                                {{ $category->title }}
+                                            </p>
+                                            <img id="arrow{{$category->id}}" src="/images/arrowRight.png" class="arrow opacity-0 object-contain ml-[15px]">
+                                        </div>
+                                        <div id="subcat{{ $category->id }}" class="hidden subcat w-[0px] h-auto bg-[#272727] absolute left-[217px]">
+                                            @foreach ($category->subcategories as $subcategory)
+                                                <p class="mt-[10px] whitespace-nowrap font-amu font-weight-400 text-[17px] leading-[19.55px] text-[#CECECE]">
+                                                    {{ $subcategory->title }}
+                                                </p>
+                                            @endforeach
+                                        </div>
                                 </div>
                             @endforeach
                         </div>

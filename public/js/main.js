@@ -104,24 +104,102 @@ document.getElementById('scroll-link').addEventListener('click', function (e) {
 });
 var line = false;
 
+let isSub = false;
 function showSubcategories(category) {
-    var allSubcategories = $('.subcategories_div');
-    var allSubcategoryLines = $('.lines');
+    if(isSub == category){
+        $("#category" + category).animate({
+            'margin-left': '0px'
+        }, 400);
 
-    allSubcategories.slideUp();
-    allSubcategoryLines.animate({width: '1px'}, 200);
-    setTimeout(function() {
-        allSubcategoryLines.css('opacity', '0');
-    }, 200);
+        $("#subcat" + category).animate({
+            'width': '0px',
+            'padding': '0px',
+        }, 400);
+        setTimeout(function() {
+            $("#subcat" + category).css({
+                'display': 'none'
+            });
+        }, 350);
+        $("#line" + category).removeClass('border-open');
+        $("#arrow" + category).animate({
+            'opacity': '0'
+        }, 400);
+        isSub = false;
+    } else if (isSub != false){
+        $(".allSubcategories").animate({
+            'margin-left': '0px'
+        }, 400);
+        $(".arrow").animate({
+            'opacity': '0'
+        }, 400);
+        $(".subcat").animate({
+            'width': '0px',
+            'padding': '0px',
+        }, 400);
+        setTimeout(function() {
+            $(".subcat").css({
+                'display': 'none'
+            });
+        }, 350);
+        $(".line").removeClass('border-open');
+        $("#category" + category).animate({
+            'margin-left': '20px'
+        }, 400);
+        $("#subcat" + category).animate({
+            'width': '213px',
+            'padding-left': '20px',
+            'padding-bottom': '4px',
+        }, 400);
+        setTimeout(function() {
+            $("#subcat" + category).css({
+                'display': 'block'
+            });
+        }, 400);
+        $("#arrow" + category).animate({
+            'opacity': '1'
+        }, 400);
+        $("#line" + category).addClass('border-open');
+        isSub = category;
+    } else {
+        console.log('else');
+        $("#category" + category).animate({
+            'margin-left': '20px'
+        }, 400);
+        $("#subcat" + category).animate({
+            'width': '213px',
+            'padding-left': '20px',
+            'padding-bottom': '4px',
+        }, 400);
+        $("#subcat" + category).css({
+            'display': 'block',
+        });
+        $("#line" + category).addClass('border-open');
 
-    line = false;
-    var subcategories = $('#category' + category);
-    if (!subcategories.is(":visible")) {
-        subcategories.slideDown();
+        $("#arrow" + category).animate({
+            'opacity': '1'
+        }, 400);
+        isSub = category;
     }
 }
 
 function showCategories() {
+    $(".line").removeClass('border-open');
+    $(".allSubcategories").animate({
+        'margin-left': '0px'
+    }, 400);
+    $(".arrow").css({
+        'opacity': '0'
+    });
+    $(".subcat").animate({
+        'width': '0px',
+        'padding': '0px',
+    }, 400);
+    setTimeout(function() {
+        $(".subcat").css({
+            'display': 'none'
+        });
+    }, 350);
+    isSub = false;
     var categories = $('#categories');
     if (categories.is(":visible")) {
         categories.slideUp();
@@ -137,7 +215,6 @@ function showCategories() {
         allSubcategoryLines.css('opacity', '0');
     }, 200);
 }
-
 function showSubcategoryLine(subcategory) {
     var subcategoryLine = $('#subcategory_line_' + subcategory);
     if (line == subcategory) {
@@ -170,7 +247,23 @@ $(document).on('click', function (event) {
         $('#categories').slideUp();
         var allSubcategories = $('.subcategories_div');
         var allSubcategoryLines = $('.lines');
-
+        $(".line").removeClass('border-open');
+        $(".allSubcategories").animate({
+            'margin-left': '0px'
+        }, 400);
+        $(".arrow").css({
+            'opacity': '0'
+        });
+        $(".subcat").animate({
+            'width': '0px',
+            'padding': '0px',
+        }, 400);
+        setTimeout(function() {
+            $(".subcat").css({
+                'display': 'none'
+            });
+        }, 350);
+        isSub = false;
         allSubcategories.slideUp();
         allSubcategoryLines.animate({width: '1px'}, 200);
         setTimeout(function() {
