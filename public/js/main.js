@@ -271,3 +271,48 @@ $(document).on('click', function (event) {
         }, 200);
     }
 });
+
+function validateForm() {
+    let validated = true;
+    document.getElementById('success').style.display = 'none';
+    document.getElementById('name-error').textContent = '';
+    document.getElementById('email-error').textContent = '';
+    document.getElementById('phone-error').textContent = '';
+    document.getElementById('message-error').textContent = '';
+
+    var name = document.querySelector('input[name="name"]').value;
+    var email = document.querySelector('input[name="email"]').value;
+    var phone = document.querySelector('input[name="phone"]').value;
+    var message = document.querySelector('textarea[name="message"]').value;
+
+    var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+    if (name.trim() === '') {
+        document.getElementById('name-error').textContent = 'Դաշտը չի կարող դատարկ լինել';
+        validated = false;
+    }
+
+    if (phone.trim() === '') {
+        document.getElementById('phone-error').textContent = 'Դաշտը չի կարող դատարկ լինել';
+        validated = false;
+    }
+
+    if (message.trim() === '') {
+        document.getElementById('message-error').textContent = 'Դաշտը չի կարող դատարկ լինել';
+        validated = false;
+    }
+
+    if (email.trim() === '') {
+        document.getElementById('email-error').textContent = 'Դաշտը չի կարող դատարկ լինել';
+        validated = false;
+    } else if (!emailPattern.test(email)) {
+        document.getElementById('email-error').textContent = 'Դաշտը պետք է պարտադիր լինի Էլ. հասցե';
+        validated = false;
+    }
+
+    if(validated){
+        return true
+    } else {
+        return false;
+    }
+}

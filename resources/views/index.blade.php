@@ -22,22 +22,31 @@
                             @foreach ($categories as $category)
                                 <div class="w-full h-auto mt-[20px]">
                                     <div class="w-full h-full flex">
-                                        <div id="category{{$category->id}}" onclick="showSubcategories({{ $category->id }})" class="allSubcategories w-[80%] flex">
-                                            <p id="line{{ $category->id }}" class="line font-amu font-weight-400 text-[17px] leading-[19.55px] text-[#CECECE]">
+                                        <div id="category{{$category->id}}"
+                                             @if(count($category->subcategories) > 0)
+                                                 onclick="showSubcategories({{ $category->id }})"
+                                             @endif
+                                             class="allSubcategories w-[80%] flex">
+                                            <p id="line{{ $category->id }}"
+                                               class="line font-amu font-weight-400 text-[17px] leading-[19.55px] text-[#CECECE]">
                                                 {{ $category->title }}
                                             </p>
-                                            <img id="arrow{{$category->id}}" src="/images/arrowRight.png" class="arrow opacity-0 object-contain ml-[15px]">
+                                            <img id="arrow{{$category->id}}" src="/images/arrowRight.png"
+                                                 class="arrow opacity-0 object-contain ml-[15px]">
                                         </div>
-                                        <div id="subcat{{ $category->id }}" class="hidden subcat w-[0px] h-auto bg-[#272727] absolute left-[217px]">
-                                            @foreach ($category->subcategories as $subcategory)
-                                                <p class="mt-[10px] whitespace-nowrap font-amu font-weight-400 text-[17px] leading-[19.55px] text-[#CECECE]">
-                                                    {{ $subcategory->title }}
-                                                </p>
-                                            @endforeach
-                                        </div>
+                                        @if(count($category->subcategories) > 0)
+                                            <div id="subcat{{ $category->id }}"
+                                                 class="hidden subcat w-[0px] h-auto bg-[#272727] absolute left-[217px]">
+                                                @foreach ($category->subcategories as $subcategory)
+                                                    <p class="mt-[10px] whitespace-nowrap font-amu font-weight-400 text-[17px] leading-[19.55px] text-[#CECECE]">
+                                                        {{ $subcategory->title }}
+                                                    </p>
+                                                @endforeach
+                                            </div>
+                                        @endif
+                                    </div>
+                                    @endforeach
                                 </div>
-                            @endforeach
-                        </div>
                     </li>
                     <li class="font-amu font-normal text-[25px] leading-[28.75px] text-white cursor-pointer">
                         Նորություններ

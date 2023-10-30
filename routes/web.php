@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomePageController;
+use App\Http\Controllers\ContactController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,6 +15,7 @@ use App\Http\Controllers\HomePageController;
 */
 
 Route::get('/', [HomePageController::class, 'index']);
+Route::post('/contact', [ContactController::class, 'sendEmail']);
 
 Route::middleware([
     'auth:sanctum',

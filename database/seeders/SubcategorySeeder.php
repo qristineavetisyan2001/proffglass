@@ -15,7 +15,13 @@ class SubcategorySeeder extends Seeder
     public function run()
     {
         $subCategoriesData = [
-            ['category_id' => '2','title' => 'Պատուհաններ'],
+            ['category_id' => '2','title' => 'Թերմո ալյումին'],
+            ['category_id' => '2','title' => 'Մետաղապլաստե'],
+            ['category_id' => '2','title' => 'Ծալվող'],
+            ['category_id' => '2','title' => 'Սահող'],
+
+            ['category_id' => '3','title' => 'Մետաղապլաստե'],
+            ['category_id' => '3','title' => 'Թերմոալյումինե'],
         ];
 
         foreach ($subCategoriesData as $subcategory) {

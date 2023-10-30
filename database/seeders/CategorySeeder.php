@@ -17,6 +17,7 @@ class CategorySeeder extends Seeder
         $categoriesData = [
             ['title' => 'Լոգախցիկներ'],
             ['title' => 'Դռներ'],
+            ['title' => 'Պատուհաններ'],
             ['title' => 'Ֆասադային կոնստուկցիաներ'],
             ['title' => 'Դարպասներ'],
         ];

@@ -67,24 +67,38 @@
     <div class="w-full h-[59px] bg-[#828485] flex items-center justify-center">
         <img src="/images/footerYerevakLogo.png" class="object-contain">
     </div>
-    <div style="box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25); border: 1px solid #C9C9C9"
-         class="hidden w-[459px] h-auto bg-[#828385] mx-auto m-[20px] pl-[40px] pr-[40px] pt-[50px] pb-[20px] absolute left-[40%] top-0">
-        <input style="color:rgba(107, 103, 100, 0.8)" type="text" class="w-full h-[39.98px] rounded-[8px]
+    <form class="hidden" method="post" action="/contact" onsubmit="return validateForm()">
+        @csrf
+        <div style="box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25); border: 1px solid #C9C9C9"
+             class="w-[459px] h-auto bg-[#828385] mx-auto m-[20px] pl-[40px] pr-[40px] pt-[50px] pb-[20px] absolute left-[40%] top-0">
+            @if(session('success'))
+                <div id="success" class="text-[#3bc43b] pb-[20px]">
+                    {{ session('success') }}
+                </div>
+            @endif
+            <input style="color:rgba(107, 103, 100, 0.8)" type="text" name="name" class="w-full h-[39.98px] rounded-[8px]
         font-amu font-weight-400 text-[17px] leading-[25px]" placeholder="Անուն Ազգանուն">
+            <span class="text-red-600" id="name-error"></span>
 
-        <input style="color:rgba(107, 103, 100, 0.8)" type="text" class="w-full h-[39.98px] rounded-[8px]
+            <input style="color:rgba(107, 103, 100, 0.8)" type="number" name="phone" class="w-full h-[39.98px] rounded-[8px]
         font-amu mt-[20px] font-weight-400 text-[17px] leading-[25px]" placeholder="Հեռ․">
+            <span class="text-red-600" id="phone-error"></span>
 
-        <input style="color:rgba(107, 103, 100, 0.8)" type="text" class="w-full h-[39.98px] rounded-[8px]
+            <input style="color:rgba(107, 103, 100, 0.8)" type="email" name="email" class="w-full h-[39.98px] rounded-[8px]
         font-amu mt-[20px] font-weight-400 text-[17px] leading-[25px]" placeholder="Էլ․ հասցե">
+            <span class="text-red-600" id="email-error"></span>
 
-        <textarea  style="color:rgba(107, 103, 100, 0.8);" type="text"
-                  class="w-full h-[150px]  rounded-[8px] font-amu mt-[20px] font-weight-400 text-[17px] leading-[25px]">
+            <textarea style="color:rgba(107, 103, 100, 0.8);" type="text" name="message"
+                      class="w-full h-[150px]  rounded-[8px] font-amu mt-[20px] font-weight-400 text-[17px] leading-[25px]">
         </textarea>
-        <div class="w-full h-auto flex justify-center mt-[15px]">
-            <button class="w-[108px] h-[23px] rounded-[2px] bg-[#637E32] hover:bg-[#486017] font-amu font-weight-400 text-[16px] leading-[25px] text-white">
-                Հաստատել
-            </button>
+            <span class="text-red-600" id="message-error"></span>
+
+            <div class="w-full h-auto flex justify-center mt-[15px]">
+                <button type="submit"
+                        class="w-[108px] h-[23px] rounded-[2px] bg-[#637E32] hover:bg-[#486017] font-amu font-weight-400 text-[16px] leading-[25px] text-white">
+                    Հաստատել
+                </button>
+            </div>
         </div>
-    </div>
+    </form>
 </div>

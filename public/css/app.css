@@ -1083,8 +1083,8 @@ select {
 .left-0 {
   left: 0px;
 }
-.left-\[300px\] {
-  left: 300px;
+.left-\[217px\] {
+  left: 217px;
 }
 .left-\[40\%\] {
   left: 40%;
@@ -1100,12 +1100,6 @@ select {
 }
 .top-\[52\%\] {
   top: 52%;
-}
-.left-\[250px\] {
-  left: 250px;
-}
-.left-\[217px\] {
-  left: 217px;
 }
 .z-0 {
   z-index: 0;
@@ -1237,9 +1231,6 @@ select {
 .mt-\[550px\] {
   margin-top: 550px;
 }
-.mt-\[5px\] {
-  margin-top: 5px;
-}
 .mt-\[80px\] {
   margin-top: 80px;
 }
@@ -1324,9 +1315,6 @@ select {
 .h-full {
   height: 100%;
 }
-.h-\[20px\] {
-  height: 20px;
-}
 .min-h-\[1250px\] {
   min-height: 1250px;
 }
@@ -1372,14 +1360,14 @@ select {
 .w-8 {
   width: 2rem;
 }
+.w-\[0px\] {
+  width: 0px;
+}
 .w-\[108px\] {
   width: 108px;
 }
 .w-\[15\%\] {
   width: 15%;
-}
-.w-\[1px\] {
-  width: 1px;
 }
 .w-\[213px\] {
   width: 213px;
@@ -1434,15 +1422,6 @@ select {
 }
 .w-full {
   width: 100%;
-}
-.w-\[70\%\] {
-  width: 70%;
-}
-.w-\[75\%\] {
-  width: 75%;
-}
-.w-\[0px\] {
-  width: 0px;
 }
 .min-w-0 {
   min-width: 0px;
@@ -1536,9 +1515,6 @@ select {
 }
 .items-center {
   align-items: center;
-}
-.justify-start {
-  justify-content: flex-start;
 }
 .justify-end {
   justify-content: flex-end;
@@ -1690,10 +1666,6 @@ select {
 .bg-\[\#828485\] {
   --tw-bg-opacity: 1;
   background-color: rgb(130 132 133 / var(--tw-bg-opacity));
-}
-.bg-\[\#ABC940\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(171 201 64 / var(--tw-bg-opacity));
 }
 .bg-black-37 {
   background-color: rgba(0, 0, 0, 0.45);
@@ -1898,9 +1870,6 @@ select {
 }
 .pt-\[100px\] {
   padding-top: 100px;
-}
-.pt-\[15px\] {
-  padding-top: 15px;
 }
 .pt-\[20px\] {
   padding-top: 20px;
@@ -2123,6 +2092,14 @@ select {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
+.text-\[\#37e237\] {
+  --tw-text-opacity: 1;
+  color: rgb(55 226 55 / var(--tw-text-opacity));
+}
+.text-\[\#3bc43b\] {
+  --tw-text-opacity: 1;
+  color: rgb(59 196 59 / var(--tw-text-opacity));
+}
 .underline {
   text-decoration-line: underline;
 }
@@ -2195,11 +2172,6 @@ select {
 }
 .transition-all {
   transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-.transition-\[0\.5\] {
-  transition-property: 0.5;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
