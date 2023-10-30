@@ -89,19 +89,21 @@ $("#door4").hover(
         }
     }
 );
+let scrollLink = document.getElementById('scroll-link');
+if(scrollLink){
+    scrollLink.addEventListener('click', function (e) {
+        e.preventDefault();
 
-document.getElementById('scroll-link').addEventListener('click', function (e) {
-    e.preventDefault();
-
-    setTimeout(function () {
-        const targetElement = document.querySelector(this.getAttribute('href'));
-        if (targetElement) {
-            targetElement.scrollIntoView({
-                behavior: 'smooth',
-            });
-        }
-    }.bind(this), 100);
-});
+        setTimeout(function () {
+            const targetElement = document.querySelector(this.getAttribute('href'));
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                });
+            }
+        }.bind(this), 100);
+    });
+}
 var line = false;
 
 let isSub = false;

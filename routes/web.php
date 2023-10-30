@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomePageController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\AboutUsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,6 +17,7 @@ use App\Http\Controllers\ContactController;
 
 Route::get('/', [HomePageController::class, 'index']);
 Route::post('/contact', [ContactController::class, 'sendEmail']);
+Route::get('/about', [AboutUsController::class, 'index']);
 
 Route::middleware([
     'auth:sanctum',

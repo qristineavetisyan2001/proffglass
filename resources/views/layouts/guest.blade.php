@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>Proff Glass</title>
 
 
     <!-- Fonts -->
@@ -15,11 +15,16 @@
 
     <!-- Scripts -->
     <script src="{{ mix('js/app.js') }}" defer></script>
+    <link rel="icon" href="/images/logo.png">
+    <link rel="stylesheet" href="{{ asset('css/main.css') }}">
 </head>
 <body>
+@include('layouts.menu')
 <div class="font-sans text-gray-900 antialiased">
     @yield('content')
 </div>
-@include('contact')
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="{{ asset('js/main.js') }}"></script>
+@include('layouts.contact')
 </body>
 </html>

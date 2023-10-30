@@ -1,20 +1,36 @@
-@extends('layouts.guest')
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <title>{{ config('app.name', 'Laravel') }}</title>
 
-@section('title', 'Proff Glass')
 
-@section('content')
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+
+    <!-- Scripts -->
+    <script src="{{ mix('js/app.js') }}" defer></script>
     <link rel="icon" href="/images/logo.png">
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
-
+</head>
+<body>
+<div class="font-sans text-gray-900 antialiased">
     <div class="w-full h-auto min-h-[1250px] bg-cover bg-no-repeat"
          style="background-image: url('images/indexImage.png')">
         <div class="w-full h-auto bg-black-37 pb-[50px]">
             <div class="w-[73%] h-[225px] mx-auto p-[40px] flex justify-between">
                 <img src="images/logo.png" class="object-contain max-w-full ml-[30px]">
                 <ul class="flex justify-between mt-[20px] w-[45%]">
-                    <li class="font-amu font-normal text-[25px] leading-[28.75px] text-white cursor-pointer">
-                        Մեր մասին
-                    </li>
+                    <a href="/about">
+                        <li class="font-amu font-normal text-[25px] leading-[28.75px] text-white cursor-pointer">
+                            Մեր մասին
+                        </li>
+                    </a>
                     <li class="font-amu font-normal text-[25px] leading-[28.75px] text-white cursor-pointer">
                         <p id="showCategories" onclick="showCategories()">Արտադրանք</p>
                         <div id="categories"
@@ -164,5 +180,9 @@
         </div>
         <div class="clear-both"></div>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="{{ asset('js/main.js') }}"></script>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="{{ asset('js/main.js') }}"></script>
+@include('layouts.contact')
+</body>
+</html>
