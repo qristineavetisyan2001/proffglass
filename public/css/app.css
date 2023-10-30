@@ -1252,6 +1252,9 @@ select {
 .mb-\[90px\] {
   margin-bottom: 90px;
 }
+.mb-\[120px\] {
+  margin-bottom: 120px;
+}
 .block {
   display: block;
 }

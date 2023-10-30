@@ -5,7 +5,7 @@
 @section('content')
     @include('layouts.menu')
     @if(count($products) > 0)
-      <div class="w-[60%] h-auto flex flex-wrap justify-between mx-auto mb-[90px]">
+      <div class="w-[60%] h-auto flex flex-wrap justify-between mx-auto mb-[120px]">
           @foreach($products as $product)
               <div class="w-[29%] h-[auto]">
                   <img src="{{ asset('images/products/' . $product->image) }}" class="object-contain">
@@ -19,7 +19,7 @@
           @endforeach
       </div>
     @else()
-        <h1 class="text-center text-[30px] font-amu font-weight-400 pb-[90px]">
+        <h1 class="text-center text-[30px] font-amu font-weight-400 pb-[120px]">
             Այս բաժնում արտադրանք դեռևս չկա
         </h1>
     @endif
