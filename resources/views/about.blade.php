@@ -4,7 +4,7 @@
 
 @section('content')
     @include('layouts.menu')
-    <div class="w-[66%] h-auto pb-[90px] mx-auto">
+    <div class="w-[66%] h-auto pb-[120px] mx-auto">
         <div class="w-full h-auto flex justify-between">
             <div class="w-[49%] h-auto">
                 <img src="/images/aboutFirstImage.png" class="object-contain">

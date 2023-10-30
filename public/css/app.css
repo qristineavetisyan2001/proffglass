@@ -1964,6 +1964,9 @@ select {
 .pb-\[90px\] {
   padding-bottom: 90px;
 }
+.pb-\[120px\] {
+  padding-bottom: 120px;
+}
 .text-left {
   text-align: left;
 }
