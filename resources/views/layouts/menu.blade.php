@@ -3,7 +3,8 @@
     <div class="w-full h-auto bg-white bg-opacity-50">
         <div class="w-[73%] h-[225px] pb-[440px] mx-auto pt-[20px] flex justify-between">
             <a href="/">
-                <img src="{{ asset('images/menuLogo.png') }}" class="object-contain max-w-full ml-[8px] mt-[21px] cursor-pointer">
+                <img src="{{ asset('images/menuLogo.png') }}"
+                     class="object-contain max-w-full ml-[8px] mt-[21px] cursor-pointer">
             </a>
             <div class="w-[59.5%] pt-[15px]">
                 <ul class="flex justify-between w-[70%]">
@@ -35,9 +36,11 @@
                                             <div id="subcat{{ $category->id }}"
                                                  class="hidden subcat w-[0px] h-auto bg-[#272727] absolute left-[217px]">
                                                 @foreach ($category->subcategories as $subcategory)
-                                                    <p class="mt-[10px] whitespace-nowrap font-amu font-weight-400 text-[17px] leading-[19.55px] text-[#CECECE]">
-                                                        {{ $subcategory->title }}
-                                                    </p>
+                                                    <a href="/subcategory/{{ $subcategory->id }}">
+                                                        <p class="mt-[10px] whitespace-nowrap font-amu font-weight-400 text-[17px] leading-[19.55px] text-[#CECECE]">
+                                                            {{ $subcategory->title }}
+                                                        </p>
+                                                    </a>
                                                 @endforeach
                                             </div>
                                         @endif
