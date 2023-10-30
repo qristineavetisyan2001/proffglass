@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomePageController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\AboutUsController;
+use App\Http\Controllers\ProductsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,6 +19,7 @@ use App\Http\Controllers\AboutUsController;
 Route::get('/', [HomePageController::class, 'index']);
 Route::post('/contact', [ContactController::class, 'sendEmail']);
 Route::get('/about', [AboutUsController::class, 'index']);
+Route::get('/subcategory/{id}', [ProductsController::class, 'index']);
 
 Route::middleware([
     'auth:sanctum',

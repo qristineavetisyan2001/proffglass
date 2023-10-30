@@ -1,9 +1,9 @@
 <div class="w-full h-auto bg-no-repeat relative"
-     style="background-image: url('images/menuImage.png')">
+     style="background-image: url('{{ asset('images/menuImage.png') }}')">
     <div class="w-full h-auto bg-white bg-opacity-50">
         <div class="w-[73%] h-[225px] pb-[440px] mx-auto pt-[20px] flex justify-between">
             <a href="/">
-                <img src="images/menuLogo.png" class="object-contain max-w-full ml-[8px] mt-[21px] cursor-pointer">
+                <img src="{{ asset('images/menuLogo.png') }}" class="object-contain max-w-full ml-[8px] mt-[21px] cursor-pointer">
             </a>
             <div class="w-[59.5%] pt-[15px]">
                 <ul class="flex justify-between w-[70%]">
@@ -52,9 +52,11 @@
                 </ul>
             </div>
         </div>
-        <div class="w-full h-auto absolute top-[40%]">
-            <h1 class="text-center font-amu font-weight-400 text-[50px] leading-[57.5px] text-[#404449]">{{ $title }}</h1>
-            <p class="text-center font-amu font-weight-400 text-[25px] leading-[28.75px] text-[#272727] mt-[20px]">{{ $subtitle }}</p>
-        </div>
+        @if(isset($title))
+            <div class="w-full h-auto absolute top-[40%]">
+                <h1 class="text-center font-amu font-weight-400 text-[50px] leading-[57.5px] text-[#404449]">{{ $title }}</h1>
+                <p class="text-center font-amu font-weight-400 text-[25px] leading-[28.75px] text-[#272727] mt-[20px]">{{ $subtitle }}</p>
+            </div>
+        @endif
     </div>
 </div>
