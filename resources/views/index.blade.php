@@ -65,6 +65,7 @@
                                     </div>
                                     @endforeach
                                 </div>
+                        </div>
                     </li>
                     <li class="font-amu font-normal text-[25px] leading-[28.75px] text-white cursor-pointer">
                         Նորություններ
