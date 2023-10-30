@@ -148,21 +148,25 @@
                 <div style="box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);"
                      class="w-[50%] h-[416px] right-0 bottom-0 bg-white absolute flex justify-center">
                     <div class="w-[60%] h-full flex flex-wrap justify-between items-center">
-                        <div id="door1" class="w-[35%] h-auto">
-                            <img src="/images/door1.png"
-                                 class="image_door1">
+                        <div class="w-[35%] h-auto">
+                            <a id="door1" href="/subcategory/1">
+                                <img src="/images/door1.png" class="image_door1">
+                            </a>
                         </div>
-                        <div id="door2" class="w-[35%] h-auto other_doors">
-                            <img src="/images/door2.png"
-                                 class="image_door2">
+                        <div class="w-[35%] h-auto other_doors">
+                            <a id="door2" href="/subcategory/3">
+                                <img src="/images/door2.png" class="image_door2">
+                            </a>
                         </div>
-                        <div id="door3" class="w-[35%] h-auto other_doors">
-                            <img src="/images/door3.png"
-                                 class="image_door3">
+                        <div class="w-[35%] h-auto other_doors">
+                            <a id="door3" href="/subcategory/2">
+                                <img src="/images/door3.png" class="image_door3">
+                            </a>
                         </div>
-                        <div id="door4" class="w-[35%] h-auto other_doors">
-                            <img src="/images/door4.png"
-                                 class="image_door4">
+                        <div class="w-[35%] h-auto other_doors">
+                            <a id="door4" href="/subcategory/4">
+                                <img src="/images/door4.png" class="image_door4">
+                            </a>
                         </div>
                     </div>
                 </div>
