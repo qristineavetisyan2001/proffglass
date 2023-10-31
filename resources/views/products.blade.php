@@ -8,7 +8,7 @@
       <div class="w-[60%] h-auto flex flex-wrap justify-between mx-auto mb-[120px]">
           @foreach($products as $product)
               <div class="w-[29%] h-[auto]">
-                  <img src="{{ asset('images/products/' . $product->image) }}" class="object-contain">
+                  <img src="{{ Storage::url('public/' . $product->image) }}" class="object-contain">
                   <h1 class="font-amu font-weight-400 text-[25px] text-[#272727] text-center leading-[28.75px]">
                       {{ $product->title }}
                   </h1>

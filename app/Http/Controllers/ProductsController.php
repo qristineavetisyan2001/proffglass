@@ -22,4 +22,11 @@ class ProductsController extends Controller
         return view('products', ['products' => $products, 'title' => $category->title, 'subtitle' => $category->title.' > '.$subcategory->title]);
 
     }
+
+    public function subcategories(Request $request)
+    {
+        $subcategories = Subcategory::all();
+        $options = $subcategories->pluck('title', 'id');
+        return response()->json($options);
+    }
 }
