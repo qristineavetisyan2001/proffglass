@@ -276,7 +276,10 @@ $(document).on('click', function (event) {
 
 function validateForm() {
     let validated = true;
-    document.getElementById('success').style.display = 'none';
+    const success = document.getElementById('success');
+    if(success){
+        success.style.display = 'none';
+    }
     document.getElementById('name-error').textContent = '';
     document.getElementById('email-error').textContent = '';
     document.getElementById('phone-error').textContent = '';
@@ -311,10 +314,20 @@ function validateForm() {
         document.getElementById('email-error').textContent = 'Դաշտը պետք է պարտադիր լինի Էլ. հասցե';
         validated = false;
     }
-
     if(validated){
         return true
     } else {
         return false;
     }
 }
+$(document).ready(function() {
+    $('#openChat').click(function() {
+        $('#chatOverlay').removeClass('hidden');
+    });
+
+    $('#chatOverlay').click(function(e) {
+        if (e.target === this) {
+            $(this).addClass('hidden');
+        }
+    });
+});
