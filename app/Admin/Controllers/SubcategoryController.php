@@ -28,6 +28,10 @@ class SubcategoryController extends AdminController
     {
         $grid = new Grid(new Subcategory());
 
+        $grid->quickSearch(function ($model, $query) {
+            $model->where('title', 'like', "%{$query}%");
+        });
+
         $grid->column('id', __('Id'));
         $grid->category('Բաժին')->display(function ($category) {
             return $category['title'];

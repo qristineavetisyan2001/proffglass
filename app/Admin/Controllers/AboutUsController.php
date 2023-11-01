@@ -27,6 +27,10 @@ class AboutUsController extends AdminController
     {
         $grid = new Grid(new AboutUs());
 
+        $grid->quickSearch(function ($model, $query) {
+            $model->where('title', 'like', "%{$query}%");
+        });
+
         $grid->column('id', __('Id'));
         $grid->column('title', __('Վերնագիր'));
         $grid->image(__('Պատկեր'))->display(function ($pictures) {

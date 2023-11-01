@@ -28,6 +28,10 @@ class ProductController extends AdminController
     {
         $grid = new Grid(new Product());
 
+        $grid->quickSearch(function ($model, $query) {
+            $model->where('title', 'like', "%{$query}%");
+        });
+
         $grid->column('id', __('Id'));
         $grid->subcategory('Ենթաբաժին')->display(function ($category) {
             return $category['title'];

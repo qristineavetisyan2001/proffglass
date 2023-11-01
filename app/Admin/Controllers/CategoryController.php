@@ -26,6 +26,10 @@ class CategoryController extends AdminController
     {
         $grid = new Grid(new Category());
 
+        $grid->quickSearch(function ($model, $query) {
+            $model->where('title', 'like', "%{$query}%");
+        });
+
         $grid->column('id', __('Id'));
         $grid->column('title', __('Վերնագիր'));
         $grid->column('created_at', __('Ստեղծվել է'));
