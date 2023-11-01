@@ -29,10 +29,12 @@ class SubcategoryController extends AdminController
         $grid = new Grid(new Subcategory());
 
         $grid->column('id', __('Id'));
-        $grid->column('category_id', __('Category id'));
-        $grid->column('title', __('Title'));
-        $grid->column('created_at', __('Created at'));
-        $grid->column('updated_at', __('Updated at'));
+        $grid->category('Բաժին')->display(function ($category) {
+            return $category['title'];
+        });
+        $grid->column('title', __('Վերնագիր'));
+        $grid->column('created_at', __('Ստեղծվել է'));
+        $grid->column('updated_at', __('Թարմացվել է'));
 
         return $grid;
     }
@@ -65,10 +67,10 @@ class SubcategoryController extends AdminController
     {
         $form = new Form(new Subcategory());
 
-        $form->select('category_id','Category')
+        $form->select('category_id','Բաժին')
             ->options(Category::all()
                 ->pluck('title','id'));
-        $form->text('title', __('Title'));
+        $form->text('title', __('Վերնագիր'));
 
         return $form;
     }

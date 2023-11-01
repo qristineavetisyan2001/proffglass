@@ -29,15 +29,17 @@ class ProductController extends AdminController
         $grid = new Grid(new Product());
 
         $grid->column('id', __('Id'));
-        $grid->column('subcategory_id', __('Subcategory id'));
-        $grid->column('title', __('Title'));
-        $grid->column('description', __('Description'));
-        $grid->image()->display(function ($pictures) {
+        $grid->subcategory('Ենթաբաժին')->display(function ($category) {
+            return $category['title'];
+        });
+        $grid->column('title', __('Վերնագիր'));
+        $grid->column('description', __('Նկարագրություն'));
+        $grid->image(__('Պատկեր'))->display(function ($pictures) {
             $imagePath = Storage::url('public/' . $pictures);
             return '<img src="' . $imagePath . '" class="object-contain" style="width: 100px" />';
         });
-        $grid->column('created_at', __('Created at'));
-        $grid->column('updated_at', __('Updated at'));
+        $grid->column('created_at', __('Ստեղծվել է'));
+        $grid->column('updated_at', __('Թարմացվել է'));
 
         return $grid;
     }
@@ -72,13 +74,13 @@ class ProductController extends AdminController
     {
         $form = new Form(new Product());
 
-        $form->select('subcategory_id','Subcategory')
+        $form->select('subcategory_id','Ենթաբաժին')
             ->options(Subcategory::all()
                 ->pluck('title','id'));
 
-        $form->text('title', __('Title'));
-        $form->textarea('description', __('Description'));
-        $form->image('image', __('Image'));
+        $form->text('title', __('Վերնագիր'));
+        $form->textarea('description', __('Նկարագրություն'));
+        $form->image('image', __('Պատկեր'));
 
         return $form;
     }
