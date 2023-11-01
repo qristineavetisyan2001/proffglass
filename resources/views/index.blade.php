@@ -67,9 +67,11 @@
                                 </div>
                         </div>
                     </li>
-                    <li class="font-amu font-normal text-[25px] leading-[28.75px] text-white cursor-pointer">
-                        Նորություններ
-                    </li>
+                    <a href="/news">
+                        <li class="font-amu font-normal text-[25px] leading-[28.75px] text-white cursor-pointer">
+                            Նորություններ
+                        </li>
+                    </a>
                 </ul>
             </div>
             <h1 class="mt-[370px] text-center text-white font-amu font-weight-400 text-[90px] leading-[103.49px]">ԳՆԻՆ
@@ -146,26 +148,38 @@
                         պատվերների ընդունում</p>
                 </div>
                 <div style="box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);"
-                     class="w-[50%] h-[416px] right-0 bottom-0 bg-white absolute flex justify-center">
+                     class="w-[50%] h-[450px] right-0 bottom-0 bg-white absolute flex justify-center">
                     <div class="w-[60%] h-full flex flex-wrap justify-between items-center">
-                        <div class="w-[35%] h-auto">
-                            <a id="door1" href="/subcategory/1">
-                                <img src="/images/door1.png" class="image_door1">
+                        <div id="doorDiv1" class="w-[35%] h-[170px] ml-[6px] relative">
+                            <a href="/subcategory/1" class="absolute opacity-1 image_door doorImages">
+                                <img src="/images/door1.png">
+                            </a>
+                            <a href="/subcategory/1" class="absolute opacity-0 image_green_door doorImages">
+                                <img src="/images/greenDoor1.png">
                             </a>
                         </div>
-                        <div class="w-[35%] h-auto other_doors">
-                            <a id="door2" href="/subcategory/3">
-                                <img src="/images/door2.png" class="image_door2">
+                        <div id="doorDiv2" class="w-[44%] h-[170px] relative">
+                            <a href="/subcategory/3" class="absolute opacity-1 image_door doorImages">
+                                <img src="/images/door2.png">
+                            </a>
+                            <a href="/subcategory/3" class="absolute opacity-0 image_green_door doorImages">
+                                <img src="/images/greenDoor2.png">
                             </a>
                         </div>
-                        <div class="w-[35%] h-auto other_doors">
-                            <a id="door3" href="/subcategory/2">
-                                <img src="/images/door3.png" class="image_door3">
+                        <div id="doorDiv3" class="w-[35%] h-[170px] relative">
+                            <a href="/subcategory/2" class="absolute opacity-1 image_door doorImages">
+                                <img src="/images/door3.png">
+                            </a>
+                            <a href="/subcategory/2" class="absolute opacity-0 image_green_door doorImages">
+                                <img src="/images/greenDoor3.png">
                             </a>
                         </div>
-                        <div class="w-[35%] h-auto other_doors">
-                            <a id="door4" href="/subcategory/4">
-                                <img src="/images/door4.png" class="image_door4">
+                        <div id="doorDiv4" class="w-[44%] h-[170px] relative">
+                            <a href="/subcategory/4" class="absolute opacity-1 image_door doorImages">
+                                <img src="/images/door4.png">
+                            </a>
+                            <a href="/subcategory/4" class="absolute opacity-0 image_green_door doorImages">
+                                <img src="/images/greenDoor4.png">
                             </a>
                         </div>
                     </div>

@@ -46,3 +46,34 @@ textarea:focus, input:focus{
 .border-open {
     border-bottom:1px solid #ABC940;
 }
+.doorImages{
+    transition: 0.3s;
+}
+
+#doorDiv1:hover .image_door {
+    opacity: 0;
+}
+#doorDiv1:hover .image_green_door {
+    opacity: 1;
+}
+
+#doorDiv2:hover .image_door {
+    opacity: 0;
+}
+#doorDiv2:hover .image_green_door {
+    opacity: 1;
+}
+
+#doorDiv3:hover .image_door {
+    opacity: 0;
+}
+#doorDiv3:hover .image_green_door {
+    opacity: 1;
+}
+
+#doorDiv4:hover .image_door {
+    opacity: 0;
+}
+#doorDiv4:hover .image_green_door {
+    opacity: 1;
+}
