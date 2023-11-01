@@ -37,13 +37,13 @@ Route::get('/subcategories', [ProductsController::class, 'subcategories']);
 //    })->name('dashboard');
 //});
 
-Route::group(['prefix' => 'admin'], function () {
-    Route::resource('products', ProductController::class);
-    Route::resource('subcategory', SubcategoryController::class);
-    Route::resource('category', CategoryController::class);
-});
+//Route::group(['prefix' => 'admin'], function () {
+//    Route::resource('products', ProductController::class);
+//    Route::resource('subcategory', SubcategoryController::class);
+//    Route::resource('category', CategoryController::class);
+//});
 
 // Then, declare the default /admin route
-Route::group(['prefix' => 'admin'], function () {
-    Admin::routes();
-});
+//Route::group(['prefix' => 'admin'], function () {
+//    Admin::routes();
+//});

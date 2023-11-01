@@ -32,7 +32,6 @@ class ProductController extends AdminController
         $grid->column('subcategory_id', __('Subcategory id'));
         $grid->column('title', __('Title'));
         $grid->column('description', __('Description'));
-        $grid->column('image', __('Image'));
         $grid->image()->display(function ($pictures) {
             $imagePath = Storage::url('public/' . $pictures);
             return '<img src="' . $imagePath . '" class="object-contain" style="width: 100px" />';
