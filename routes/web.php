@@ -23,6 +23,6 @@ Route::get('/', [HomePageController::class, 'index']);
 Route::post('/contact', [ContactController::class, 'sendEmail']);
 Route::get('/about', [AboutUsController::class, 'index']);
 Route::get('/news', [NewsController::class, 'index']);
-Route::get('/new/{id}', [NewsController::class, 'show']);
+Route::get('/news/{id}', [NewsController::class, 'show']);
 Route::get('/subcategory/{id}', [ProductsController::class, 'index']);
 Route::get('/subcategories', [ProductsController::class, 'subcategories']);

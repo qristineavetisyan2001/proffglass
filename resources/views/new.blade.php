@@ -23,7 +23,7 @@
 
     <div class="w-[80%] h-auto mx-auto flex flex-wrap justify-start pb-[120px]">
         @foreach($news as $item)
-            <a class="w-[20%] h-auto cursor-pointer ml-[40px]" href="/new/{{ $item->id }}">
+            <a class="w-[20%] h-auto cursor-pointer ml-[40px]" href="/news/{{ $item->id }}">
                 <img src="{{ Storage::url('public/' . $item->image) }}" class="object-contain w-full">
                 <div class="w-full h-auto flex justify-start items-center mt-[10px]">
                     <div class="w-[23px] h-[1px] bg-[#637E32]"></div>

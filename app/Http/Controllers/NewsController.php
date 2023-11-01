@@ -17,7 +17,7 @@ class NewsController extends Controller
     public function show($id)
     {
         $new = News::findOrFail($id);
-        $news = News::all();
+        $news = News::where('id', '!=', $id)->get();
         return view('new', [
             'title' => 'ՆՈՐՈՒԹՅՈՒՆՆԵՐ',
             'subtitle' => $new->title,
