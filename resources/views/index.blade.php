@@ -138,7 +138,7 @@
                     </p>
                 </div>
             </div>
-            <div class="w-[90%] h-auto pt-[80px] flex flex-wrap relative">
+            <div class="w-[90%] h-auto pt-[80px] pb-[15px] flex flex-wrap relative">
                 <img src="/images/individual.png" class="object-contain">
                 <div>
                     <h1 class="font-amu font-weight-400 text-[35px] mt-[40px] ml-[15px] leading-[40.25px] text-title-color">
@@ -148,9 +148,9 @@
                         պատվերների ընդունում</p>
                 </div>
                 <div style="box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);"
-                     class="w-[50%] h-[450px] right-0 bottom-0 bg-white absolute flex justify-center">
-                    <div class="w-[60%] h-full flex flex-wrap justify-between items-center">
-                        <div id="doorDiv1" class="w-[35%] h-[170px] ml-[6px] relative">
+                     class="w-[50%] h-[435px] right-0 bottom-0 bg-white absolute flex justify-center">
+                    <div class="w-[60%] h-full flex flex-wrap justify-between items-center content-start">
+                        <div id="doorDiv1" class="w-[35%] h-[170px] mt-[30px] ml-[6px] relative">
                             <a href="/subcategory/1" class="absolute opacity-1 image_door doorImages">
                                 <img src="/images/door1.png">
                             </a>
@@ -158,7 +158,7 @@
                                 <img src="/images/greenDoor1.png">
                             </a>
                         </div>
-                        <div id="doorDiv2" class="w-[44%] h-[170px] relative">
+                        <div id="doorDiv2" class="w-[44%] h-[170px] mt-[30px] relative">
                             <a href="/subcategory/3" class="absolute opacity-1 image_door doorImages">
                                 <img src="/images/door2.png">
                             </a>
@@ -166,7 +166,7 @@
                                 <img src="/images/greenDoor2.png">
                             </a>
                         </div>
-                        <div id="doorDiv3" class="w-[35%] h-[170px] relative">
+                        <div id="doorDiv3" class="w-[35%] h-[170px] mt-[30px] relative">
                             <a href="/subcategory/2" class="absolute opacity-1 image_door doorImages">
                                 <img src="/images/door3.png">
                             </a>
@@ -174,7 +174,7 @@
                                 <img src="/images/greenDoor3.png">
                             </a>
                         </div>
-                        <div id="doorDiv4" class="w-[44%] h-[170px] relative">
+                        <div id="doorDiv4" class="w-[44%] h-[170px] mt-[30px] relative">
                             <a href="/subcategory/4" class="absolute opacity-1 image_door doorImages">
                                 <img src="/images/door4.png">
                             </a>
