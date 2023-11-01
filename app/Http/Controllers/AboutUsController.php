@@ -9,7 +9,7 @@ class AboutUsController extends Controller
 {
     public function index(){
         $aboutUs = AboutUs::all();
-        return view('about', ['title' => 'ՆՈՐՈՒԹՅՈՒՆՆԵՐ', 'subtitle' => 'Գլխավոր > Արտադրանք'])
+        return view('about', ['title' => 'Մեր մասին'])
             ->with('aboutUs', $aboutUs);
     }
 }

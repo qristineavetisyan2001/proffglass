@@ -17,4 +17,5 @@ Route::group([
     $router->resource('subcategory', SubcategoryController::class);
     $router->resource('products', ProductController::class);
     $router->resource('about_us', AboutUsController::class);
+    $router->resource('news', NewsController::class);
 });

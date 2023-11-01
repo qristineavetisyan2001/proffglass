@@ -49,16 +49,20 @@
                                 </div>
                         </div>
                     </li>
-                    <li class="font-amu font-normal text-[25px] leading-[28.75px] text-[#272727] cursor-pointer">
-                        Նորություններ
-                    </li>
+                    <a href="/news">
+                        <li class="font-amu font-normal text-[25px] leading-[28.75px] text-[#272727] cursor-pointer">
+                            Նորություններ
+                        </li>
+                    </a>
                 </ul>
             </div>
         </div>
         @if(isset($title))
             <div class="w-full h-auto absolute top-[40%]">
                 <h1 class="text-center font-amu font-weight-400 text-[50px] leading-[57.5px] text-[#404449]">{{ $title }}</h1>
-                <p class="text-center font-amu font-weight-400 text-[25px] leading-[28.75px] text-[#272727] mt-[20px]">{{ $subtitle }}</p>
+                @if(isset($subtitle))
+                    <p class="text-center font-amu font-weight-400 text-[25px] leading-[28.75px] text-[#272727] mt-[20px]">{{ $subtitle }}</p>
+                @endif
             </div>
         @endif
     </div>

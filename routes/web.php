@@ -6,9 +6,7 @@ use App\Http\Controllers\HomePageController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\AboutUsController;
 use App\Http\Controllers\ProductsController;
-use App\Admin\Controllers\ProductController;
-use App\Admin\Controllers\SubcategoryController;
-use App\Admin\Controllers\CategoryController;
+use App\Http\Controllers\NewsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,5 +22,7 @@ use App\Admin\Controllers\CategoryController;
 Route::get('/', [HomePageController::class, 'index']);
 Route::post('/contact', [ContactController::class, 'sendEmail']);
 Route::get('/about', [AboutUsController::class, 'index']);
+Route::get('/news', [NewsController::class, 'index']);
+Route::get('/new/{id}', [NewsController::class, 'show']);
 Route::get('/subcategory/{id}', [ProductsController::class, 'index']);
 Route::get('/subcategories', [ProductsController::class, 'subcategories']);
