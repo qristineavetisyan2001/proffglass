@@ -1605,6 +1605,9 @@ select {
 .w-\[10\%\] {
   width: 10%;
 }
+.w-\[110\%\] {
+  width: 110%;
+}
 .min-w-0 {
   min-width: 0px;
 }
