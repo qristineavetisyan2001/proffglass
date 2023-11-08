@@ -81,9 +81,11 @@
             </a>
         </div>
     </div>
+    @include('menu')
     <div id="about-us" class="w-full h-auto pb-[30px] pt-[100px] bg-home-page-background">
         <div class="w-[85%] h-auto float-right">
-            <p class="font-amu font-weight-400 text-[34px] leading-[40.25px] text-title-color">ՄԵՐ ՄԱՍԻՆ</p>
+            <p class="font-amu font-weight-400 text-[34px] leading-[40.25px] text-title-color text-[#485713]">ՄԵՐ ՄԱՍԻՆ</p>
+            <div class="w-full h-[1px]" style="background-color: rgba(130, 132, 133, 0.5);"></div>
             <div class="w-full h-[1px] bg-line-color bg-opacity-50"></div>
             <div class="w-[90%] h-auto flex content-end pt-[40px]">
                 <img class="object-contain" src="/images/AboutUs.png">
@@ -107,33 +109,34 @@
                 </div>
             </div>
         </div>
-        <div class="w-[85%] h-auto float-right mt-[80px]">
-            <p class="font-amu font-weight-400 text-[34px] leading-[40.25px] text-title-color">ԱՐՏԱԴՐԱՆՔ</p>
+        <div class="w-[25%] float-left h-auto mt-[80px]">
+            <p class="font-amu text-right font-weight-400 text-[34px] leading-[40.25px] text-[#485713] ">ԱՐՏԱԴՐԱՆՔ</p>
+            <div class="w-full h-[1px]" style="background-color: rgba(130, 132, 133, 0.5);"></div>
         </div>
         <div class="w-[27%] h-[1px] bg-line-color bg-opacity-50 float-left"></div>
         <div class="w-[85%] h-auto float-right">
             <div class="w-[90%] h-auto flex justify-between pt-[20px]">
                 <div class="w-[23%]">
                     <img class="object-contain" src="/images/product1.png">
-                    <p class="font-amu font-weight-400 text-[24px] mt-[15px] leading-[27.6px] text-title-color text-center">
+                    <p class="font-amu text-[#485713] font-weight-400 text-[24px] mt-[15px] leading-[27.6px] text-title-color text-center">
                         Լոգախցիկներ
                     </p>
                 </div>
                 <div class="w-[23%]">
                     <img class="object-contain" src="/images/product2.png">
-                    <p class="font-amu font-weight-400 text-[24px] mt-[15px] leading-[27.6px] text-title-color text-center">
+                    <p class="font-amu text-[#485713] font-weight-400 text-[24px] mt-[15px] leading-[27.6px] text-title-color text-center">
                         Պատուհաններ
                     </p>
                 </div>
                 <div class="w-[23%]">
                     <img class="object-contain" src="/images/product3.png">
-                    <p class="font-amu font-weight-400 text-[24px] mt-[15px] leading-[27.6px] text-title-color text-center">
+                    <p class="font-amu text-[#485713] font-weight-400 text-[24px] mt-[15px] leading-[27.6px] text-title-color text-center">
                         Ֆասադային կոնստրուկցիաներ
                     </p>
                 </div>
                 <div class="w-[23%]">
                     <img class="object-contain" src="/images/product4.png">
-                    <p class="font-amu font-weight-400 text-[24px] mt-[15px] leading-[27.6px] text-title-color text-center">
+                    <p class="font-amu text-[#485713] font-weight-400 text-[24px] mt-[15px] leading-[27.6px] text-title-color text-center">
                         Դարպասներ
                     </p>
                 </div>
@@ -141,7 +144,7 @@
             <div class="w-[90%] h-auto pt-[80px] pb-[15px] flex flex-wrap relative">
                 <img src="/images/individual.png" class="object-contain">
                 <div>
-                    <h1 class="font-amu font-weight-400 text-[35px] mt-[40px] ml-[15px] leading-[40.25px] text-title-color">
+                    <h1 class="font-amu text-[#485713] font-weight-400 text-[35px] mt-[40px] ml-[15px] leading-[40.25px] text-title-color">
                         Դռներ</h1>
                     <p class="font-amu font-weight-400 text-[28px] mt-[10px] ml-[15px] leading-[32.2px] text-[#637E32]">
                         Անհատական
@@ -185,8 +188,12 @@
                     </div>
                 </div>
             </div>
-            <p class="font-amu font-weight-400 text-[34px] leading-[40.25px] text-title-color mt-[80px]">Մեր
-                աշխատանքները</p>
+            <p class="font-amu font-weight-400 text-[34px] leading-[40.25px] text-title-color mt-[80px] text-[#485713]">
+                Մեր աշխատանքները
+            </p>
+            <div class="w-full h-[1px] mt-[5px]" style="background-color: rgba(130, 132, 133, 0.5);"></div>
+
+            <dic class="w-full h-[1px]"></dic>
             <div class="w-full h-[1px] bg-line-color bg-opacity-50 mt-[10px]"></div>
             <div class="w-[90%] h-auto flex justify-between pt-[20px]">
 
