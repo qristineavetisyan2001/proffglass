@@ -23,7 +23,7 @@
                 height: 326px !important;
             }</style>
     </div>
-    <button id="openChat" class="w-[227px] h-[50px] bg-[#637E32] rounded-[2px] font-amu font-weight-400
+    <button class="openChat w-[227px] h-[50px] bg-[#637E32] rounded-[2px] font-amu font-weight-400
      text-white text-[24px] leading-[27.6px] absolute left-[44%] top-[52%] hover:bg-[#486017] cursor-pointer">
         Ուղարկել նամակ
     </button>

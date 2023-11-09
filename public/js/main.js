@@ -230,13 +230,28 @@ function validateForm() {
     }
 }
 $(document).ready(function() {
-    $('#openChat').click(function() {
-        $('#chatOverlay').removeClass('hidden');
+    $('.openChat').each(function() {
+        $(this).click(function() {
+            $('#chatOverlay').removeClass('hidden');
+        });
     });
 
     $('#chatOverlay').click(function(e) {
         if (e.target === this) {
             $(this).addClass('hidden');
+        }
+    });
+});
+$(document).ready(function() {
+    $(window).scroll(function() {
+        var scrollPosition = $(this).scrollTop();
+
+        if (scrollPosition >= 1251) {
+            $('#menu_content').addClass('fixed');
+            $('#about-us').css('padding-top', '300px');
+        } else {
+            $('#menu_content').removeClass('fixed');
+            $('#about-us').css('padding-top', '100px');
         }
     });
 });

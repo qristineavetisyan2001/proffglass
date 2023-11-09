@@ -80,3 +80,7 @@ textarea:focus, input:focus{
 #doorDiv4:hover .image_green_door {
     opacity: 1;
 }
+.fixed {
+    z-index: 999;
+    top: 0;
+}

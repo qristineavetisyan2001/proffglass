@@ -20,68 +20,22 @@
 </head>
 <body>
 <div class="font-sans text-gray-900 antialiased">
-    <div class="w-full h-auto min-h-[1250px] bg-cover bg-no-repeat"
+    <div class="w-full h-auto min-h-[1250px] bg-cover bg-no-repeat flex flex-wrap justify-center items-end pb-[60px]"
          style="background-image: url('images/indexImage.png')">
-        <div class="w-full h-auto bg-black-37 pb-[50px]">
-            <div class="w-[73%] h-[225px] mx-auto p-[40px] flex justify-between">
-                <img src="images/logo.png" class="object-contain max-w-full ml-[30px]">
-                <ul class="flex justify-between mt-[20px] w-[45%]">
-                    <a href="/about">
-                        <li class="font-amu font-normal text-[25px] leading-[28.75px] text-white cursor-pointer">
-                            Մեր մասին
-                        </li>
-                    </a>
-                    <li class="font-amu font-normal text-[25px] leading-[28.75px] text-white cursor-pointer">
-                        <p id="showCategories" onclick="showCategories()">Արտադրանք</p>
-                        <div id="categories"
-                             class="hidden w-[213px] h-auto bg-[#272727] mt-[20px] pl-[20px] pb-[20px] absolute">
-                            @foreach ($categories as $category)
-                                <div class="w-full h-auto mt-[20px]">
-                                    <div class="w-full h-full flex">
-                                        <div id="category{{$category->id}}"
-                                             @if(count($category->subcategories) > 0)
-                                                 onclick="showSubcategories({{ $category->id }})"
-                                             @endif
-                                             class="allSubcategories w-[80%] flex">
-                                            <p id="line{{ $category->id }}"
-                                               class="line font-amu font-weight-400 text-[17px] leading-[19.55px] text-[#CECECE]">
-                                                {{ $category->title }}
-                                            </p>
-                                            <img id="arrow{{$category->id}}" src="/images/arrowRight.png"
-                                                 class="arrow opacity-0 object-contain ml-[15px]">
-                                        </div>
-                                        @if(count($category->subcategories) > 0)
-                                            <div id="subcat{{ $category->id }}"
-                                                 class="hidden subcat w-[0px] h-auto bg-[#272727] absolute left-[217px]">
-                                                @foreach ($category->subcategories as $subcategory)
-                                                    <a href="/subcategory/{{ $subcategory->id }}">
-                                                        <p class="mt-[10px] whitespace-nowrap font-amu font-weight-400 text-[17px] leading-[19.55px] text-[#CECECE]">
-                                                            {{ $subcategory->title }}
-                                                        </p>
-                                                    </a>
-                                                @endforeach
-                                            </div>
-                                        @endif
-                                    </div>
-                                    @endforeach
-                                </div>
-                        </div>
-                    </li>
-                    <a href="/news">
-                        <li class="font-amu font-normal text-[25px] leading-[28.75px] text-white cursor-pointer">
-                            Նորություններ
-                        </li>
-                    </a>
-                </ul>
-            </div>
-            <h1 class="mt-[370px] text-center text-white font-amu font-weight-400 text-[90px] leading-[103.49px]">ԳՆԻՆ
+            <h1 class="text-center text-white font-amu font-weight-400 text-[90px] leading-[103.49px]">ԳՆԻՆ
                 ՀԱՄԱՐԺԵՔ ՈՐԱԿ</h1>
-            <a href="#about-us" id="scroll-link">
-                <img class="mx-auto cursor-pointer mt-[550px]" src="/images/arrowDown.png">
+        <div class="w-full">
+            <a href="#menu" id="scroll-link">
+                <img class="mx-auto cursor-pointer" src="/images/arrowDown.png">
             </a>
         </div>
+{{--        </div>--}}
     </div>
-    @include('menu')
+    <div id="menu" class="w-full h-auto relative">
+        <div id="menu_content" class="w-full h-auto">
+            @include('menu')
+        </div>
+    </div>
     <div id="about-us" class="w-full h-auto pb-[30px] pt-[100px] bg-home-page-background">
         <div class="w-[85%] h-auto float-right">
             <p class="font-amu font-weight-400 text-[34px] leading-[40.25px] text-title-color text-[#485713]">ՄԵՐ ՄԱՍԻՆ</p>
