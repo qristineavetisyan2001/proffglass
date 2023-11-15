@@ -1,8 +1,10 @@
 <div class="w-[110%] h-auto flex relative">
     <div class="w-[26%] h-[200px] bg-[#404338] ml-[-40px] flex justify-center items-center"
          style="transform: skewX(20deg);">
-        <img src="images/menuLogo.png" class="object-contain 3xl:max-w-full md:max-w-[150px]"
-             style="transform: skewX(-20deg);">
+        <a href="/">
+            <img src="/images/menuLogo.png" class="object-contain 3xl:max-w-full md:max-w-[150px]"
+                 style="transform: skewX(-20deg);">
+        </a>
     </div>
     <div class="w-[70%] h-[200px]" style="transform: skewX(20deg)">
         <div class="w-full h-[65px] bg-[#F1F1F1] ml-[-1px]">
@@ -11,21 +13,21 @@
                      style="transform: skewX(-20deg);">
                     <div class="w-[89.5%] h-auto flex justify-between">
                         <div class="w-[50%] h-auto flex justify-end">
-                            <img src="images/menuMap.png" class="object-contain max-w-[10px]">
+                            <img src="/images/menuMap.png" class="object-contain max-w-[10px]">
                             <h1 class="font-noah font-weight-400 text-[16px] leading-[25px] text-[#485713] ml-[10px]">
                                 Ք․ Երևան Ռոստովյան 13/1
                             </h1>
                         </div>
                         <div class="w-[50%] h-auto flex justify-center">
-                            <img src="images/menuPhone.png" class="object-contain max-w-[10px]">
+                            <img src="/images/menuPhone.png" class="object-contain max-w-[10px]">
                             <h1 class="font-noah font-weight-400 text-[16px] leading-[25px] text-[#485713] ml-[10px]">
                                 +374 10 43 00 02
                             </h1>
                         </div>
                     </div>
                     <div class="w-[10.5%] h-auto flex justify-between">
-                        <img src="images/menuFacebook.png" class="object-contain max-w-[25px]">
-                        <img src="images/menuInstagram.png" class="object-contain max-w-[25px]">
+                        <img src="/images/menuFacebook.png" class="object-contain max-w-[25px]">
+                        <img src="/images/menuInstagram.png" class="object-contain max-w-[25px]">
                     </div>
                 </div>
             </div>

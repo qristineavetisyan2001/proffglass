@@ -3,9 +3,9 @@
 @section('title', 'Proff Glass')
 
 @section('content')
-    @include('layouts.menu')
+    @include('menu')
 
-    <div class="w-[80%] h-auto mx-auto mb-[90px]">
+    <div class="w-[80%] h-auto mx-auto mb-[90px] mt-[150px]">
         <h1 class="font-amu font-weight-400 text-[25px] text-center leading-[17.25px] text-[#637E32] ml-[10px]">
             {{ $new->title }}
         </h1>
