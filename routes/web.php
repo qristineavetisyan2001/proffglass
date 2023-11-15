@@ -1,6 +1,12 @@
 <?php
 
+use Encore\Admin\Facades\Admin;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomePageController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\AboutUsController;
+use App\Http\Controllers\ProductsController;
+use App\Http\Controllers\NewsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,16 +19,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
-
-Route::middleware([
-    'auth:sanctum',
-    config('jetstream.auth_session'),
-    'verified'
-])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
-});
+Route::get('/', [HomePageController::class, 'index']);
+Route::post('/contact', [ContactController::class, 'sendEmail']);
+Route::get('/about', [AboutUsController::class, 'index']);
+Route::get('/news', [NewsController::class, 'index']);
+Route::get('/news/{id}', [NewsController::class, 'show']);
+Route::get('/subcategory/{id}', [ProductsController::class, 'index']);
+Route::get('/subcategories', [ProductsController::class, 'subcategories']);

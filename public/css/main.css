@@ -1,0 +1,87 @@
+body{
+    overflow-x: hidden;
+    background-color: #F1F1F1;
+}
+.green_door {
+    animation-duration: 0.3s;
+    animation-fill-mode: both;
+    animation-timing-function: ease;
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
+        height: auto;
+    }
+    to {
+        opacity: 0;
+        height: 0;
+    }
+}
+
+.door {
+    opacity: 0;
+    height: 0;
+    display: none;
+    animation-name: fade-out;
+    animation-delay: 1s;
+}
+#door1 img {
+    width: 100%;
+    height: 165px;
+    object-fit: contain;
+    cursor: pointer;
+}
+.other_doors img{
+    width: 100%;
+    height: 170px;
+    object-fit: contain;
+    cursor: pointer;
+}
+.mapouter{
+    width: 100% !important;
+}
+textarea:focus, input:focus{
+    outline: none!important;
+}
+.line{
+    border-bottom: 1px solid transparent;
+}
+.border-open {
+    border-bottom:1px solid #ABC940;
+}
+.doorImages{
+    transition: 0.3s;
+}
+
+#doorDiv1:hover .image_door {
+    opacity: 0;
+}
+#doorDiv1:hover .image_green_door {
+    opacity: 1;
+}
+
+#doorDiv2:hover .image_door {
+    opacity: 0;
+}
+#doorDiv2:hover .image_green_door {
+    opacity: 1;
+}
+
+#doorDiv3:hover .image_door {
+    opacity: 0;
+}
+#doorDiv3:hover .image_green_door {
+    opacity: 1;
+}
+
+#doorDiv4:hover .image_door {
+    opacity: 0;
+}
+#doorDiv4:hover .image_green_door {
+    opacity: 1;
+}
+.fixed {
+    z-index: 999;
+    top: 0;
+}
