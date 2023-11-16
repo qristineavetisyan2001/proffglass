@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 class ProductsController extends Controller
 {
     public function index($id){
+        $categories = Category::orderBy('id', 'asc')->with('subcategories')->get();
         $category = Category::whereHas('subcategories', function ($querry) use($id){
             $querry->where('id', $id);
         })->firstOrFail();
@@ -17,9 +18,9 @@ class ProductsController extends Controller
         ->with('products')
             ->orderBy('id', 'asc')
             ->firstOrFail();
-        $products = Product::where('subcategory_id', $id)->get();
+        $products = Product::where('subcategory_id', $id)->paginate(8);
 
-        return view('products', ['products' => $products, 'title' => $category->title, 'subtitle' => $category->title.' > '.$subcategory->title]);
+        return view('products', ['products' => $products, 'title' => 'Գլխավոր > '.$category->title. ' > '. $subcategory->title, 'categories' => $categories]);
 
     }
 

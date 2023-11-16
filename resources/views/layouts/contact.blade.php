@@ -71,7 +71,7 @@
     <form method="post" action="/contact" onsubmit="return validateForm()">
         @csrf
         <div style="box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25); border: 1px solid #C9C9C9; top:170px"
-             class="w-[459px] h-auto bg-[#828385] mx-auto m-[20px] pl-[40px] pr-[40px] pt-[50px] pb-[20px] absolute left-[40%] top-0">
+             class="w-[459px] h-auto bg-[#828385] mx-auto m-[20px] pl-[40px] pr-[40px] pt-[50px] pb-[20px] absolute 3xl:left-[40%] 2xl:left-[35%] xl:left-[32%] lg:left-[28%] top-0">
             @if(session('success'))
                 <div id="success" class="text-[#3bc43b] pb-[20px]">
                     {{ session('success') }}

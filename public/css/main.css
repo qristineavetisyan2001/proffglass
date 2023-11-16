@@ -1,5 +1,6 @@
 body{
     overflow-x: hidden;
+    background-color: #F1F1F1;
 }
 .green_door {
     animation-duration: 0.3s;

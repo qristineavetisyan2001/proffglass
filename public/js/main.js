@@ -233,12 +233,23 @@ $(document).ready(function() {
     $('.openChat').each(function() {
         $(this).click(function() {
             $('#chatOverlay').removeClass('hidden');
+            $('body').css({
+                'overflow': 'hidden',
+                'overscroll-behavior-y': 'none',
+                '-webkit-overflow-scrolling': 'touch'
+            });
         });
+
     });
 
     $('#chatOverlay').click(function(e) {
         if (e.target === this) {
             $(this).addClass('hidden');
+            $('body').css({
+                'overflow': 'auto',
+                'overscroll-behavior-y': 'auto',
+                '-webkit-overflow-scrolling': 'auto'
+            });
         }
     });
 });
