@@ -248,7 +248,8 @@ $(document).ready(function() {
             $('body').css({
                 'overflow': 'auto',
                 'overscroll-behavior-y': 'auto',
-                '-webkit-overflow-scrolling': 'auto'
+                '-webkit-overflow-scrolling': 'auto',
+                'overflow-x': 'hidden',
             });
         }
     });
