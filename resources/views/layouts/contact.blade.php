@@ -43,7 +43,7 @@
                         <div class="w-full h-auto mt-[15px] flex">
                             <img src="/images/phoneIcon.png" class="object-contain h-[24px]">
                             <p class="font-noah font-weight-400 text-white text-[18px] leading-[25px] ml-[10px]">
-                                +374 10 43 00 02<br> +374 77 000 465 / +374 33 433 002
+                                +374 10 43 00 02<br> +374 77 000 465
                             </p>
                         </div>
                         <div class="w-full h-auto mt-[15px] flex">
