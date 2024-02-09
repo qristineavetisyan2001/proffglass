@@ -1,24 +1,23 @@
-<div class="w-[110%] h-auto flex relative">
-    <div class="w-[26%] h-[200px] bg-[#404338] ml-[-40px] flex justify-center items-center"
-         style="transform: skewX(20deg);">
+<div class="w-[110%] flex relative">
+    <div style="height: 135px;transform: skewX(20deg);" class="w-[26%] bg-[#404338] ml-[-40px] flex justify-center items-center">
         <a href="/">
             <img src="/images/menuLogo.png" class="object-contain 3xl:max-w-full md:max-w-[150px]"
                  style="transform: skewX(-20deg);">
         </a>
     </div>
-    <div class="w-[70%] h-[200px]" style="transform: skewX(20deg)">
+    <div class="w-[70%]" style="transform: skewX(20deg)">
         <div class="w-full h-[65px] bg-[#F1F1F1] ml-[-1px]">
             <div class="w-[95%] h-full flex justify-end items-center">
                 <div class="3xl:w-[45%] 2xl:w-[60%] xl:w-[65%] lg:w-[70%] md:w-full h-auto flex justify-between"
                      style="transform: skewX(-20deg);">
-                    <div class="w-[89.5%] h-auto flex justify-between">
-                        <div class="w-[50%] h-auto flex justify-end">
+                    <div style="margin-right: 20px" class="w-[89.5%] h-auto flex justify-end">
+                        <div style="margin-right: 50px;" class=" h-auto flex">
                             <img src="/images/menuMap.png" class="object-contain max-w-[10px]">
                             <h1 class="font-noah font-weight-400 text-[16px] leading-[25px] text-[#485713] ml-[10px]">
                                 Ք․ Երևան Ռոստովյան 13/1
                             </h1>
                         </div>
-                        <div class="w-[50%] h-auto flex justify-center">
+                        <div class="h-auto flex">
                             <img src="/images/menuPhone.png" class="object-contain max-w-[10px]">
                             <h1 class="font-noah font-weight-400 text-[16px] leading-[25px] text-[#485713] ml-[10px]">
                                 +374 10 43 00 02
@@ -32,16 +31,16 @@
                 </div>
             </div>
         </div>
-        <div class="w-full h-[135px] bg-[#485713] ml-[-1px] flex justify-center items-center">
+        <div style="height: 70px" class="w-full  bg-[#485713] ml-[-1px] flex justify-center items-center">
             <div class="w-full h-auto flex justify-end">
                 <div class="3xl:w-[85%] 2xl:w-[95%] xl:w-[95%] lg:w-[95%] h-auto flex justify-between" style="transform: skewX(-20deg)">
-                    <ul class="flex justify-between 3xl:w-[55%] 2xl:w-[55%] xl:w-[60%] lg:w-[60%]">
+                    <ul style="margin-left: 12%" class="flex justify-between 3xl:w-[55%] 2xl:w-[55%] xl:w-[60%] lg:w-[60%]">
                         <a class="flex items-center" href="/about">
-                            <li class="font-[ArialAmu] uppercase font-normal 3xl:text-[25px] 2xl:text-[25px] xl:text-[22px] leading-[28.75px] text-white cursor-pointer">
+                            <li class="font-[ArialAmu] uppercase font-normal 3xl:text-[20px] 2xl:text-[20px] xl:text-[22px] leading-[28.75px] text-white cursor-pointer">
                                 Մեր մասին
                             </li>
                         </a>
-                        <li class="font-[ArialAmu] uppercase 3xl:text-[25px] 2xl:text-[25px] xl:text-[22px] leading-[28.75px] text-white cursor-pointer">
+                        <li class="font-[ArialAmu] uppercase 3xl:text-[20px] 2xl:text-[20px] xl:text-[22px] leading-[28.75px] text-white cursor-pointer">
                             <div class="w-full h-full flex items-center">
                                 <p id="showCategories" onclick="showCategories()">Արտադրանք</p>
                             </div>
@@ -80,7 +79,7 @@
                             </div>
                         </li>
                         <a class="flex items-center" href="/news">
-                            <li class="font-[ArialAmu] uppercase font-normal 3xl:text-[25px] 2xl:text-[25px] xl:text-[22px] leading-[28.75px] text-white cursor-pointer">
+                            <li class="font-[ArialAmu] uppercase font-normal 3xl:text-[20px] 2xl:text-[20px] xl:text-[22px] leading-[28.75px] text-white cursor-pointer">
                                 Նորություններ
                             </li>
                         </a>
