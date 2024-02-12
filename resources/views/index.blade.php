@@ -21,7 +21,7 @@
 <body>
 <div class="font-sans text-gray-900 antialiased">
     <div class="w-full h-auto min-h-[1250px] bg-cover bg-no-repeat flex flex-wrap justify-center items-end pb-[60px]"
-         style="background-image: url('images/indexImage.png')">
+         style="background-image: url('images/Group 97.png')">
             <h1 class="text-center text-white font-amu font-weight-400 text-[90px] leading-[103.49px]">ԳՆԻՆ
                 ՀԱՄԱՐԺԵՔ ՈՐԱԿ</h1>
         <div class="w-full">

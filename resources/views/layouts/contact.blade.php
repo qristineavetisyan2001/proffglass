@@ -23,8 +23,8 @@
                 height: 326px !important;
             }</style>
     </div>
-    <button class="openChat w-[227px] h-[50px] bg-[#637E32] rounded-[2px] font-amu font-weight-400
-     text-white text-[24px] leading-[27.6px] absolute left-[44%] top-[52%] hover:bg-[#486017] cursor-pointer">
+    <button style="width: 191px; height: 42px; font-size: 16px" class="openChat bg-[#637E32] rounded-[2px] font-amu font-weight-400
+     text-white leading-[27.6px] absolute left-[44%] top-[52%] hover:bg-[#486017] cursor-pointer">
         Ուղարկել նամակ
     </button>
         <div class="w-full h-[186px] bg-[#414141]">
@@ -32,8 +32,8 @@
                 <div class="w-[15%] h-full flex items-center">
                     <img src="/images/footerLogo.png" class="object-contain max-w-full">
                 </div>
-                <div class="w-[40%] h-auto flex">
-                    <div class="w-[60%] h-auto pt-[30px]">
+                <div style="width: 42%" class="h-auto flex">
+                    <div class="w-[60%] h-auto" style="padding-top: 20px">
                         <div class="w-full h-auto flex">
                             <img src="/images/mapIcon.png" class="object-contain">
                             <p class="font-noah font-weight-400 text-white text-[20px] leading-[25px] ml-[10px]">
@@ -53,7 +53,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="w-[40%] h-auto flex justify-end pr-[40px] pt-[20px]">
+                    <div class="w-[40%] h-auto flex justify-end pr-[40px]" style="padding-top: 20px">
                         <a href="#">
                             <img src="/images/facebookIcon.png" class="object-contain">
                         </a>

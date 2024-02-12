@@ -8,7 +8,7 @@
     </div>
     <div class="w-[70%] h-[200px]" style="transform: skewX(20deg)">
         <div class="w-full h-[65px] bg-[#F1F1F1] ml-[-1px]">
-            <div class="w-[95%] h-full flex justify-end items-center">
+            <div class="h-full flex justify-end items-center" style="width: 92%">
                 <div class="3xl:w-[45%] 2xl:w-[60%] xl:w-[65%] lg:w-[70%] md:w-full h-auto flex justify-between"
                      style="transform: skewX(-20deg);">
                     <div class="w-[89.5%] h-auto flex justify-between">
@@ -87,8 +87,8 @@
                     </ul>
                     <div class="3xl:w-[27%] 2xl:w-[27%] xl:w-[32%] lg:w-[32%] h-auto">
                         <button
-                            class="openChat 3xl:w-[230px] 2xl:w-[230px] xl:w-[230px] lg:w-[180px] text-white font-[ArialAmu] uppercase h-[48px] bg-[#637E32] hover:bg-[#4F6526FF]"
-                            style="box-shadow: 0 2px 7px -2px rgba(0, 0, 0, 0.25)">
+                            class="openChat 3xl:w-[191px] 2xl:w-[191px] xl:w-[191px] lg:w-[180px] text-white font-[ArialAmu] uppercase bg-[#637E32] hover:bg-[#4F6526FF]"
+                            style="height:42px; font-size: 16px; box-shadow: 0 2px 7px -2px rgba(0, 0, 0, 0.25)">
                             Ուղարկել նամակ
                         </button>
                     </div>
